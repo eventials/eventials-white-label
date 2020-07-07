@@ -2,8 +2,23 @@
 /* eslint-disable react/jsx-one-expression-per-line */
 /* eslint-disable jsx-a11y/label-has-associated-control */
 import * as React from 'react';
-import CustomCarousel from 'components/CustomCarousel';
-import { Container, Toolbar } from './styles';
+import BannerCarousel from 'components/BannerCarousel';
+import WebinarCarousel from 'components/WebinarsCarousel';
+import {
+  Container,
+  Description,
+  TextDescription,
+  Webinars,
+  LiveTitle,
+  Toolbar,
+  CarouselWrapper,
+  NavPrev,
+  NavNext,
+  Item,
+  ItemsContainer,
+  SeeAll,
+  ButtonSeeAll,
+} from './styles';
 
 function Main() {
   return (
@@ -21,35 +36,18 @@ function Main() {
           </a>
         </Toolbar>
 
-        {/* <div className="carousel-banner-wrapper">
-          <div className="owl-carousel owl-theme">
-            <div className="carousel-container">
-              <img
-                src="https://s3.amazonaws.com/static.eventials.com/whitelabel-snd/Banner1.jpg"
-                alt="banner1"
-              />
-              <img
-                src="https://s3.amazonaws.com/static.eventials.com/whitelabel-snd/Banner2.jpg"
-                alt="banner2"
-              />
-            </div>
-            
-          </div>
-          <div className="dots"></div>
-        </div> */}
+        <BannerCarousel />
 
-        <CustomCarousel />
-
-        <div className="description">
+        <Description>
           <img
             src="https://s3.amazonaws.com/static.eventials.com/whitelabel-snd/banner_texto_vazio_cortado.png"
             alt="Description"
           />
-          <div className="text">
+          <TextDescription>
             <p>
-              Bem-vindo a <b className="orange bold">Universidade</b>
-              <span className="bold">SND</span>, o canal que proporciona
-              conhecimento aos nossos clientes.
+              Bem-vindo a <b style={{ color: '#ff4d1f' }}>Universidade</b>
+              <span style={{ fontWeight: 700 }}> SND</span>, o canal que
+              proporciona conhecimento aos nossos clientes.
             </p>
             <p>
               Compartilhamos expertise e apoiamos o seu desenvolvimento. Aqui
@@ -61,23 +59,23 @@ function Main() {
               quem faz a sua rotina e quem dita o calendário.
             </p>
             <p>
-              <span className="bold">Aproveite!</span>
+              <span style={{ fontWeight: 700 }}>Aproveite!</span>
             </p>
-          </div>
-        </div>
+          </TextDescription>
+        </Description>
 
         {/* {% if groups|length or courses|length %} */}
-        <div className="whitelabel-tracks">
+        <Webinars>
           {/* {% if live_talks|length %} */}
-          <h3 className="whitelabel-upcomings-title">
+          <LiveTitle>
             <img
               src="https://s3.amazonaws.com/static.eventials.com/whitelabel-snd/red-camera-icon.png"
               alt="live"
             />
             Ao vivo
-          </h3>
-          <div className="carousel-wrapper">
-            <div className="nav nav-prev">
+          </LiveTitle>
+          <CarouselWrapper>
+            <NavPrev>
               <span>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -89,14 +87,14 @@ function Main() {
                   <path d="M16.62 2.99c-.49-.49-1.28-.49-1.77 0L6.54 11.3c-.39.39-.39 1.02 0 1.41l8.31 8.31c.49.49 1.28.49 1.77 0s.49-1.28 0-1.77L9.38 12l7.25-7.25c.48-.48.48-1.28-.01-1.76z" />
                 </svg>
               </span>
-            </div>
-            <div className="owl-carousel owl-theme">
+            </NavPrev>
+            <ItemsContainer>
               {/* {% for talk in live_talks %}
             {% include 'whitelabel_snd/partial/profile-tracks.html' with talk=talk %}
             {% endfor %} */}
 
-              <div className="item">
-                <div className="card">
+              <Item>
+                <div>
                   {/* <a href="{% url 'core_talk' username=talk.owner.username talk_slug=talk.slug %}"> */}
                   <a href="https://eventials.com">
                     {/* {% thumbnail talk.image 'talk.xlarge' as im %} */}
@@ -109,9 +107,9 @@ function Main() {
                 </div>
                 <label className="card-title">Card Title</label>
                 <label className="card-start-time">talk|start_time </label>
-              </div>
-            </div>
-            <div className="nav nav-next">
+              </Item>
+            </ItemsContainer>
+            <NavNext>
               <span>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -123,17 +121,16 @@ function Main() {
                   <path d="M7.38 21.01c.49.49 1.28.49 1.77 0l8.31-8.31c.39-.39.39-1.02 0-1.41L9.15 2.98c-.49-.49-1.28-.49-1.77 0s-.49 1.28 0 1.77L14.62 12l-7.25 7.25c-.48.48-.48 1.28.01 1.76z" />
                 </svg>
               </span>
-            </div>
-          </div>
+            </NavNext>
+          </CarouselWrapper>
           {/* {% endif %} */}
 
           {/* {% if courses|length %} */}
           <h3 className="whitelabel-upcomings-title">CURSOS</h3>
-          {/* {% for course in courses %} */}
-          {/* {% if course.talks %} */}
+          {/* {% fButtonSeeAllf course.talks %} */}
           <h3 className="whitelabel-tracks-title"> course.name </h3>
-          <div className="carousel-wrapper">
-            <div className="nav nav-prev">
+          <CarouselWrapper>
+            <NavPrev>
               <span>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -145,18 +142,18 @@ function Main() {
                   <path d="M16.62 2.99c-.49-.49-1.28-.49-1.77 0L6.54 11.3c-.39.39-.39 1.02 0 1.41l8.31 8.31c.49.49 1.28.49 1.77 0s.49-1.28 0-1.77L9.38 12l7.25-7.25c.48-.48.48-1.28-.01-1.76z" />
                 </svg>
               </span>
-            </div>
-            <div className="owl-carousel owl-theme">
+            </NavPrev>
+            <ItemsContainer>
               {/* {% for talk in course.talks %}
             {% include 'whitelabel_snd/partial/profile-tracks.html' with talk=talk %}
             {% endfor %} */}
-              <div className="item">
-                <div className="card">
+              <Item>
+                <div>
                   {/* <a href="{% url 'core_talk' username=talk.owner.username talk_slug=talk.slug %}"> */}
                   <a href="https://eventials.com">
                     {/* {% thumbnail talk.image 'talk.xlarge' as im %} */}
                     <img
-                      src="https://static.eventials.com/media/thumb_cache/fa/d9/fad9687b9dce60bd6a99a733b944aaf0.jpg"
+                      src="https://static.eventials.com/media/thumb_cache/45/c0/45c0591f04d220d779722bba5c12a273.jpg"
                       alt="thumbnail"
                     />
                     {/* {% endthumbnail %} */}
@@ -164,15 +161,15 @@ function Main() {
                 </div>
                 <label className="card-title">Card Title</label>
                 <label className="card-start-time">talk|start_time </label>
-              </div>
-              <a
+              </Item>
+              <ButtonSeeAll
                 className="item see-all"
                 href="{% url 'group' username=course.owner.username group_kind=course.kind_pluralized group_slug=course.slug %}"
               >
                 <div className="card">Ver todos</div>
-              </a>
-            </div>
-            <div className="nav nav-next">
+              </ButtonSeeAll>
+            </ItemsContainer>
+            <NavNext>
               <span>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -184,8 +181,8 @@ function Main() {
                   <path d="M7.38 21.01c.49.49 1.28.49 1.77 0l8.31-8.31c.39-.39.39-1.02 0-1.41L9.15 2.98c-.49-.49-1.28-.49-1.77 0s-.49 1.28 0 1.77L14.62 12l-7.25 7.25c-.48.48-.48 1.28.01 1.76z" />
                 </svg>
               </span>
-            </div>
-          </div>
+            </NavNext>
+          </CarouselWrapper>
           {/* {% endif %}
     {% endfor %}
     {% endif %} */}
@@ -194,8 +191,8 @@ function Main() {
     {% for group in groups %}
     {% if group.talks  %} */}
           <h3 className="whitelabel-tracks-title"> group.name </h3>
-          <div className="carousel-wrapper">
-            <div className="nav nav-prev">
+          <CarouselWrapper>
+            <NavPrev>
               <span>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -207,18 +204,18 @@ function Main() {
                   <path d="M16.62 2.99c-.49-.49-1.28-.49-1.77 0L6.54 11.3c-.39.39-.39 1.02 0 1.41l8.31 8.31c.49.49 1.28.49 1.77 0s.49-1.28 0-1.77L9.38 12l7.25-7.25c.48-.48.48-1.28-.01-1.76z" />
                 </svg>
               </span>
-            </div>
-            <div className="owl-carousel owl-theme">
+            </NavPrev>
+            <ItemsContainer>
               {/* {% for talk in group.talks %}
             {% include 'whitelabel_snd/partial/profile-tracks.html' with talk=talk %}
             {% endfor %} */}
-              <div className="item">
-                <div className="card">
+              <Item>
+                <div>
                   {/* <a href="{% url 'core_talk' username=talk.owner.username talk_slug=talk.slug %}"> */}
                   <a href="https://eventials.com">
                     {/* {% thumbnail talk.image 'talk.xlarge' as im %} */}
                     <img
-                      src="https://static.eventials.com/media/thumb_cache/fa/d9/fad9687b9dce60bd6a99a733b944aaf0.jpg"
+                      src="https://static.eventials.com/media/thumb_cache/2b/36/2b36e1df5b51f2e0f4d215630f9408e1.jpg"
                       alt="thumbnail"
                     />
                     {/* {% endthumbnail %} */}
@@ -226,15 +223,15 @@ function Main() {
                 </div>
                 <label className="card-title">Card Title</label>
                 <label className="card-start-time">talk|start_time </label>
-              </div>
-              <a
+              </Item>
+              <ButtonSeeAll
                 className="item see-all"
                 href="{% url 'group' username=group.owner.username group_kind=group.kind_pluralized group_slug=group.slug %}"
               >
                 <div className="card">Ver todos</div>
-              </a>
-            </div>
-            <div className="nav nav-next">
+              </ButtonSeeAll>
+            </ItemsContainer>
+            <NavNext>
               <span>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -246,19 +243,18 @@ function Main() {
                   <path d="M7.38 21.01c.49.49 1.28.49 1.77 0l8.31-8.31c.39-.39.39-1.02 0-1.41L9.15 2.98c-.49-.49-1.28-.49-1.77 0s-.49 1.28 0 1.77L14.62 12l-7.25 7.25c-.48.48-.48 1.28.01 1.76z" />
                 </svg>
               </span>
-            </div>
-          </div>
+            </NavNext>
+          </CarouselWrapper>
           {/* {% endif %}
     {% endfor %}
     {% endif %} */}
 
-          <div className="see-all">
-            <a href="{% url 'profile_talks' username=owner.username %}">
+          <SeeAll>
+            <ButtonSeeAll href="{% url 'profile_talks' username=owner.username %}">
               Ver todos
-            </a>
-          </div>
-        </div>
-
+            </ButtonSeeAll>
+          </SeeAll>
+        </Webinars>
         {/* {% endif %}
 
 {% if events|length %} */}
@@ -272,7 +268,7 @@ function Main() {
           <div className="card-event {% if forloop.counter0 > 2 %}card-event-hidden{% endif %}">
             <div className="image">
               <img
-                src="https://static.eventials.com/media/thumb_cache/fa/d9/fad9687b9dce60bd6a99a733b944aaf0.jpg"
+                src="https://static.eventials.com/media/thumb_cache/ca/11/ca1172d4e13cfb0b8f5c12b305f2a7db.jpg"
                 alt="event"
               />
             </div>
@@ -285,11 +281,11 @@ function Main() {
           {/* {% endfor %} */}
         </div>
         {/* {% if events|length > 3 %} */}
-        <div className="see-all">
-          <a id="toggleEvents" href="https://eventials.com">
+        <SeeAll>
+          <ButtonSeeAll id="toggleEvents" href="https://eventials.com">
             Ver todos
-          </a>
-        </div>
+          </ButtonSeeAll>
+        </SeeAll>
         {/* {% endif %} */}
         {/* {% endif %} */}
 
