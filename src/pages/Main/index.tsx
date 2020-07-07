@@ -1,7 +1,9 @@
+/* eslint-disable react/self-closing-comp */
 /* eslint-disable react/jsx-one-expression-per-line */
 /* eslint-disable jsx-a11y/label-has-associated-control */
 import * as React from 'react';
-import '../../styles/styles.css';
+import 'styles/whitelabel-template.less';
+import 'styles/styles.css';
 
 function Main() {
   return (

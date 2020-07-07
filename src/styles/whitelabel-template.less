@@ -1,0 +1,704 @@
+@import url('https://rsms.me/inter/inter.css');
+@import (reference) 'apps/site/static/less/desktop/apps/main-eventials.less';
+@import url('https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.css');
+
+@b2w-primary-color: #000;
+@marykay-primary-color: #f76787;
+
+.whitelabel_font {
+  font-family: 'Inter';
+  -webkit-font-smoothing: antialiased;
+  line-height: 1.4em;
+}
+
+body.whitelabel-template.light {
+  background-color: @white;
+}
+
+body.whitelabel-template.black {
+  background-color: #000;
+}
+
+.whitelabel-contact {
+  .whitelabel-contact-container {
+    .whitelabel-contact-form {
+      .whitelabel-btn {
+        background-color: #b93026;
+        color: white;
+      }
+    }
+  }
+}
+.whitelabel-template {
+  .whitelabel-login {
+  }
+  .carousel-banner-wrapper {
+    margin-top: 60px;
+    position: relative;
+    .dots {
+      position: absolute;
+      bottom: 0;
+      margin: 0 auto;
+      left: 0;
+      right: 0;
+      margin-left: auto;
+      display: flex;
+      margin-right: auto;
+      justify-content: center;
+      height: 30px;
+      > button {
+        z-index: 1;
+        border: 2px solid #e82b3f;
+        background-color: transparent;
+        margin-right: 5px;
+        width: 15px;
+        height: 15px;
+        border-radius: 50%;
+        &.active {
+          background-color: #e82b3f;
+        }
+      }
+    }
+  }
+  .whitelabel-container {
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 500px;
+
+    .whitelabel-login {
+      background: black;
+      width: 100%;
+      position: absolute;
+      top: 0;
+      height: 60px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      .whitelabel-login-content {
+        height: 60px;
+        align-items: center;
+        justify-content: flex-start;
+        display: flex;
+        margin: 0 auto;
+        justify-content: space-between;
+        width: 90%;
+        max-width: 1300px;
+
+        .whitelabel-image {
+          margin-left: 10px;
+        }
+      }
+    }
+
+    .whitelabel-banner {
+      align-items: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      height: 100%;
+
+      .whitelabel-logo {
+        height: auto;
+        margin-bottom: 20px;
+        margin-top: 20px;
+        max-width: 350px;
+      }
+
+      .whitelabel-channel-name {
+        .whitelabel_font();
+        color: @white;
+        font-size: 48px;
+        margin: 20px 0px;
+        padding: 0;
+        font-weight: 600;
+      }
+
+      .whitelabel-channel-description {
+        .whitelabel_font();
+        color: @white;
+        font-size: 20px;
+        margin: 0;
+        padding: 0 15px;
+        text-align: center;
+        width: 50%;
+        min-width: 200px;
+        font-weight: 300;
+      }
+    }
+  }
+  .whitelabel-upcomings-tracks {
+    max-width: 1410px;
+    width: 90%;
+    margin: 0 auto;
+    .upcoming-list {
+      padding-top: 10px;
+      display: flex;
+      flex-direction: column;
+      .upcoming-talk {
+        display: inline-flex;
+        align-items: center;
+        .upcoming-talk-info {
+          display: flex;
+          margin-left: 30px;
+          flex-direction: column;
+          .upcoming-talk-slug {
+            font-size: 16px;
+            color: rgba(0, 0, 0, 0.87);
+            text-decoration: none;
+          }
+          .upcoming-talk-date {
+            font-size: 14px;
+            color: #7f807f;
+            margin-top: 12px;
+          }
+        }
+        .calendar {
+          width: 53px;
+          height: 52px;
+          font-size: 10px;
+          border: 1px solid #ebebeb;
+          margin-left: 37px;
+          border-radius: 4px;
+          overflow: hidden;
+
+          .day {
+            border-radius: unset;
+            margin-top: 0;
+            line-height: 22px;
+            padding: 5px 14px;
+            font-size: 22px;
+          }
+        }
+        img {
+          width: 125px;
+          height: 80px;
+        }
+      }
+    }
+  }
+
+  .whitelabel-upcomings {
+    .whitelabel-upcomings-title {
+      color: @white;
+      margin: 50px auto 0 auto;
+      max-width: 1350px;
+      width: 90%;
+      font-family: 'Inter';
+      font-weight: 500;
+      font-size: 20px;
+      padding-left: 60px;
+    }
+
+    .whitelabel-talks-upcoming {
+      display: flex;
+      max-width: 1350px;
+      width: 90%;
+      margin: 0 auto;
+      align-items: center;
+      justify-content: flex-start;
+      flex-wrap: wrap;
+      overflow: auto;
+
+      .item {
+        display: flex;
+        flex-direction: column;
+        margin: 0 10px 25px 10px;
+        .card {
+          align-items: center;
+          border: none;
+          display: flex;
+          height: 218px;
+          justify-content: center;
+          width: 300px;
+          margin-bottom: 10px;
+
+          a {
+            display: block;
+
+            img {
+              height: 218px;
+              width: 300px;
+            }
+          }
+        }
+
+        .card-title {
+          color: #deffff;
+          font-size: 1rem;
+          display: block;
+          font-size: 15px;
+          .whitelabel_font();
+          overflow-wrap: break-word;
+        }
+
+        .card-start-time {
+          color: @white;
+          .whitelabel_font();
+          display: block;
+          font-size: 12px;
+        }
+      }
+    }
+  }
+
+  .whitelabel-tracks-title,
+  .whitelabel-upcomings-title {
+    padding-bottom: 15px;
+    width: 100%;
+    margin: 50px auto 0 auto;
+    font-family: 'Inter';
+    font-weight: 500;
+    font-size: 20px;
+  }
+
+  .see-all {
+    margin: 15px auto;
+    height: 45px;
+    padding: 15px 20px;
+    cursor: pointer;
+    a {
+      min-width: 200px;
+      padding: 20px;
+      font-size: 16px;
+      color: white;
+      border-radius: 3px;
+      cursor: pointer;
+      outline: none;
+      border: none;
+      text-align: center;
+      text-decoration: none;
+      font-weight: 500;
+    }
+    border-radius: 3px;
+  }
+  .whitelabel-tracks {
+    display: flex;
+    max-width: 1410px;
+    width: 90%;
+    margin: 0 auto;
+    align-items: center;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    .talk-grid {
+      width: 100%;
+      display: flex;
+      flex-flow: row wrap;
+      .item {
+        margin: 0 10px 25px 0;
+        .card-title {
+          color: rgba(0, 0, 0, 0.87);
+        }
+        .card-start-time {
+          color: #7f807f;
+        }
+      }
+    }
+
+    .item {
+      display: flex;
+      flex-direction: column;
+      margin: 0 10px 25px 10px;
+      text-decoration: none;
+      max-width: 300px;
+
+      .card {
+        align-items: center;
+        border: none;
+        display: flex;
+        justify-content: center;
+        margin-bottom: 10px;
+        height: 218px;
+        width: 300px;
+
+        svg {
+          fill: @white;
+          height: 32px;
+          width: 32px;
+          cursor: pointer;
+        }
+      }
+
+      .card-title {
+        color: #deffff;
+        font-size: 1rem;
+        display: block;
+        font-size: 16px;
+        .whitelabel_font();
+        overflow-wrap: break-word;
+      }
+
+      .card-start-time {
+        color: @white;
+        .whitelabel_font();
+        display: block;
+        font-size: 14px;
+      }
+    }
+  }
+
+  .whitelabel-contact {
+    align-items: center;
+    display: flex;
+    height: 500px;
+    position: relative;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-top: 30px;
+
+    .whitelabel-contact-container {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      margin: 0 auto;
+      max-width: 1300px;
+      width: 90%;
+      align-items: center;
+
+      .whitelabel-contact-text {
+        width: 50%;
+
+        h3 {
+          color: @white;
+          .whitelabel_font();
+          font-size: 55px;
+          font-weight: 600;
+          line-height: 1em;
+          margin: 0 0 20px 0;
+          padding: 0;
+          width: 600px;
+        }
+
+        p {
+          color: @white;
+          .whitelabel_font();
+          font-size: 22px;
+          font-weight: 400;
+          width: 500px;
+        }
+      }
+
+      .whitelabel-contact-form {
+        align-items: center;
+        background: rgba(0, 0, 0, 0.3);
+        border-radius: 5px;
+        display: flex;
+        flex-direction: column;
+        padding: 20px;
+        width: 350px;
+
+        input,
+        textarea {
+          .whitelabel_font();
+          border-radius: 3px;
+          border: 0;
+          margin-bottom: 20px;
+          width: 100%;
+          padding: 10px;
+        }
+
+        input {
+          height: 40px;
+        }
+
+        textarea {
+          height: 100px;
+        }
+
+        .whitelabel-btn {
+          align-self: center;
+          border: none;
+          border-radius: 3px;
+          font-size: 16px;
+          height: 51px;
+          line-height: 51px;
+          margin-top: 20px;
+          text-align: center;
+          width: 100%;
+          font-weight: 500;
+        }
+
+        .whitelabel-form-field-error {
+          display: block;
+          width: 100%;
+          color: @red;
+          margin-bottom: 20px;
+          margin-top: -20px; /* hack */
+        }
+      }
+    }
+  }
+
+  .whitelabel-footer {
+    background: #262627;
+    .whitelabel-contact {
+      background-size: cover;
+      height: 450px;
+    }
+
+    .whitelabel-footer-container {
+      max-width: 1300px;
+      width: 90%;
+      margin: 0 auto;
+      padding: 50px 0;
+
+      .whitelabel-footer-logo {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .whitelabel-footer-social-icons {
+          a {
+            text-decoration: none;
+
+            svg {
+              fill: #686868;
+              margin: 0 5px;
+            }
+          }
+        }
+      }
+
+      .whitelabel-linebreak {
+        border: 0;
+        border-top: 1px solid #414247;
+        margin: 20px 0;
+        padding: 0;
+      }
+
+      .whitelabel-copyright {
+        color: #ffffff99;
+        font-size: 11px;
+        margin: 10px 0;
+        padding: 0;
+      }
+    }
+  }
+
+  &.white {
+    .whitelabel-login {
+      background: rgba(0, 0, 0, 1);
+    }
+    .whitelabel-upcomings-title,
+    .whitelabel-tracks-title {
+      color: #000000;
+    }
+
+    .whitelabel-tracks,
+    .whitelabel-upcomings {
+      .item {
+        > label.card-title {
+          color: #000000;
+        }
+        > label.card-start-time {
+          margin-top: 5px;
+          color: rgba(0, 0, 0, 0.54);
+        }
+      }
+    }
+  }
+
+  &.black {
+    .whitelabel-login {
+      background: #000000;
+    }
+    .whitelabel-upcomings-title,
+    .whitelabel-tracks-title {
+      color: @white;
+    }
+
+    svg {
+      fill: @white;
+    }
+
+    .whitelabel-tracks,
+    .whitelabel-upcomings {
+      .item {
+        > label.card-title {
+          color: @white;
+        }
+        > label.card-start-time {
+          margin-top: 5px;
+          color: @white;
+        }
+      }
+      .card-start-time {
+        color: @white;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .talk-grid {
+    justify-content: center;
+  }
+  .whitelabel-template {
+    .whitelabel-container {
+      height: unset;
+      .whitelabel-login {
+        width: 100%;
+
+        .whitelabel-login-content {
+          width: 100%;
+          padding: 0 10%;
+        }
+      }
+
+      .whitelabel-banner {
+        .whitelabel-channel-description {
+          width: 100%;
+        }
+      }
+
+      .whitelabel-upcomings {
+        width: 100%;
+      }
+    }
+
+    .whitelabel-upcomings-title {
+      text-align: center;
+      width: 100%;
+      padding: 0;
+      margin: 50px 0 10px 0;
+    }
+
+    .whitelabel-talks-upcoming {
+      align-items: center;
+      flex-wrap: wrap;
+      justify-content: center;
+      width: 100%;
+    }
+    .whitelabel-upcomings-tracks {
+      max-width: 1350px;
+      .upcoming-list {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        .upcoming-talk {
+          width: 270px;
+          display: unset;
+          position: relative;
+          .calendar {
+            position: absolute;
+            top: 110px;
+            left: 13px;
+            font-size: 13px;
+            margin-left: 0;
+            .day {
+              font-size: 18px;
+            }
+          }
+          .upcoming-talk-image {
+            display: flex;
+            justify-content: center;
+            img {
+              width: 270px;
+              height: 172px;
+            }
+          }
+          .upcoming-talk-info {
+            width: 270px;
+            margin: auto;
+            font-family: 'Inter';
+            .upcoming-talk-slug {
+              margin-top: 15px;
+              font-size: 15px;
+            }
+            .upcoming-talk-date {
+              margin-top: 10px;
+              font-size: 14px;
+            }
+          }
+        }
+      }
+    }
+
+    .whitelabel-tracks,
+    .whitelabel-upcomings .whitelabel-talks-upcoming {
+      .item .card {
+        img {
+          width: 270px;
+          height: 172px;
+        }
+      }
+    }
+    .whitelabel-tracks,
+    .whitelabel-upcomings {
+      .item.item.item {
+        width: 270px;
+        margin: 14px 0 0 0;
+        .card {
+          border: none;
+          width: 270px;
+          height: 172px;
+        }
+        > label.card-title {
+          font-size: 15px;
+        }
+        > label.card-start-time {
+          margin-top: 5px;
+          font-size: 14px;
+        }
+      }
+      max-width: 1350px;
+      width: 90%;
+      justify-content: center;
+      margin: auto;
+
+      .whitelabel-tracks-title {
+        text-align: center;
+        width: 100%;
+        padding: 0;
+        margin: 50px 0 10px 0;
+      }
+    }
+
+    .whitelabel-contact.whitelabel-contact {
+      width: 100%;
+      height: 600px;
+
+      .whitelabel-contact-container {
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+        width: 100%;
+        height: 550px;
+
+        .whitelabel-contact-text {
+          width: 100%;
+          padding: 20px;
+          margin: 0;
+
+          h3 {
+            margin-top: 5px;
+            font-size: 38px;
+            width: 100%;
+            text-align: center;
+          }
+
+          p {
+            font-size: 18px;
+            width: 100%;
+            text-align: center;
+          }
+        }
+
+        .whitelabel-contact-form {
+          width: 100%;
+        }
+      }
+    }
+
+    .whitelabel-footer {
+      height: initial;
+      padding: 0 30px;
+
+      .whitelabel-footer-container {
+        padding: 20px 0;
+        width: 100%;
+      }
+    }
+  }
+}
