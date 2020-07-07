@@ -1,0 +1,878 @@
+@import url('https://rsms.me/inter/inter.css');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.css');
+.whitelabel_font {
+  font-family: 'Inter';
+  -webkit-font-smoothing: antialiased;
+  line-height: 1.4em;
+}
+.event-title {
+  max-width: 1410px;
+  margin: 0px auto;
+  width: 90%;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: center;
+  justify-content: center;
+  text-align: center;
+}
+.card-event-container {
+  max-width: 1000px;
+  width: 90%;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin: 0px auto;
+  padding: 30px 0px;
+}
+.card-event-hidden:not(.card-event-show) {
+  display: none !important;
+}
+.card-event {
+  width: 300px;
+  height: 280px;
+  margin: 15px;
+  background-color: white;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+.image {
+  position: relative;
+  width: 300px;
+  max-height: 200px;
+}
+.image > img {
+  max-width: 100%;
+  overflow: hidden;
+}
+.content {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  -ms-flex-pack: distribute;
+  justify-content: space-around;
+  padding: 0px 10px;
+}
+.date {
+  font-weight: 500;
+  color: #f44336;
+}
+.name {
+  font-weight: 500;
+  font-size: 15px;
+  color: #212121;
+}
+.location {
+  -ms-flex-item-align: bottom;
+  -ms-grid-row-align: bottom;
+  align-self: bottom;
+  font-size: 14px;
+  color: #424242;
+}
+.carousel-banner-wrapper {
+  position: relative;
+  background-color: white;
+  overflow: hidden;
+}
+.overflow-loading {
+  overflow: hidden;
+}
+.loading {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 99999;
+  background-color: #f3f1ea;
+  overflow: hidden;
+}
+.loading span {
+  display: block;
+  width: 50px;
+  height: 50px;
+  border-radius: 100%;
+  border-left: 4px solid white;
+  border-right: 4px solid #ffffff24;
+  border-top: 4px solid #ffffff24;
+  border-bottom: 4px solid #ffffff24;
+  animation: gira-gira 1s infinite cubic-bezier(0.43, 0.84, 0.61, 0.14);
+}
+@keyframes gira-gira {
+  0% {
+    transform: rotate(0deg);
+    transition-timing-function: cubic-bezier(0.2, 0.5, 0.3, 1);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.dots {
+  background-color: transparent;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: center;
+  justify-content: center;
+  z-index: 3;
+  width: 100%;
+  margin: 6px;
+  position: absolute;
+  bottom: 0;
+}
+.dots .owl-dot {
+  cursor: pointer;
+  background-color: transparent;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  border: 2px white solid;
+  margin: 3px;
+  outline: none;
+  padding: 0px;
+}
+.dots .owl-dot.active {
+  background-color: #f3f1ea;
+}
+@media only screen and (max-width: 700px) {
+  .description.description {
+    padding: 20px;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -ms-flex-pack: center;
+    justify-content: center;
+  }
+  .description.description picture {
+    -ms-flex-pack: center;
+    justify-content: center;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .description.description span {
+    padding: 35px 0px 10px 0px;
+  }
+}
+.description {
+  padding: 20px 60px;
+  max-width: 1410px;
+  margin: auto;
+  width: 90%;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+  align-items: center;
+}
+.description span {
+  font-family: 'Inter';
+  font-size: 17px;
+  padding: 35px;
+}
+.see-all {
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  margin: 5px;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+.see-all a {
+  min-width: 200px;
+  padding: 20px;
+  font-size: 16px;
+  background-color: #f3f1ea;
+  color: rgba(0, 0, 0, 0.8);
+  border-radius: 3px;
+  cursor: pointer;
+  outline: none;
+  border: none;
+  text-align: center;
+  text-decoration: none;
+  font-weight: 500;
+}
+.carousel-container {
+  width: 100%;
+  max-height: 500px;
+  display: -ms-flexbox;
+  display: flex;
+}
+.carousel-container img {
+  max-width: 100%;
+  width: auto;
+  -ms-flex-item-align: baseline;
+  align-self: baseline;
+}
+body.whitelabel-template {
+  background-color: #f5f5f5;
+}
+body.whitelabel-template .whitelabel-upcomings-tracks {
+  background-color: white;
+  margin: 0px;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+body.whitelabel-template .whitelabel-upcomings-tracks .upcoming-talk {
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -ms-flex-align: center;
+  align-items: center;
+}
+body.whitelabel-template
+  .whitelabel-upcomings-tracks
+  .upcoming-talk
+  .upcoming-talk-info {
+  display: -ms-flexbox;
+  display: flex;
+  margin-left: 30px;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+body.whitelabel-template
+  .whitelabel-upcomings-tracks
+  .upcoming-talk
+  .upcoming-talk-info
+  .title {
+  font-size: 16px;
+  color: rgba(0, 0, 0, 0.87);
+  text-decoration: none;
+}
+body.whitelabel-template
+  .whitelabel-upcomings-tracks
+  .upcoming-talk
+  .upcoming-talk-info
+  .time {
+  font-size: 14px;
+  color: #7f807f;
+  margin-top: 4px;
+}
+body.whitelabel-template .whitelabel-upcomings-tracks .upcoming-talk .calendar {
+  min-width: 53px;
+  max-width: 55px;
+  height: 52px;
+  font-size: 10px;
+  border: 1px solid #ebebeb;
+  margin-left: 60px;
+  border-radius: 4px;
+  overflow: hidden;
+}
+body.whitelabel-template
+  .whitelabel-upcomings-tracks
+  .upcoming-talk
+  .calendar
+  .day {
+  border-radius: unset;
+  margin-top: 0;
+  line-height: 22px;
+  padding: 5px 14px;
+  font-size: 22px;
+}
+body.whitelabel-template .whitelabel-upcomings-tracks .upcoming-talk img {
+  width: 125px;
+  height: 80px;
+}
+.whitelabel-contact .whitelabel-contact-container img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+.whitelabel-contact
+  .whitelabel-contact-container
+  .whitelabel-contact-form
+  input,
+.whitelabel-contact
+  .whitelabel-contact-container
+  .whitelabel-contact-form
+  textarea {
+  font-family: 'Inter';
+  -webkit-font-smoothing: antialiased;
+  line-height: 1.4em;
+}
+.whitelabel-contact
+  .whitelabel-contact-container
+  .whitelabel-contact-form
+  .whitelabel-btn {
+  background-color: #00468b;
+  color: white;
+  text-transform: uppercase;
+  font-size: 17px;
+}
+.item.see-all .card {
+  background-color: #f3f1ea;
+  color: rgba(0, 0, 0, 0.8);
+}
+.whitelabel-template .whitelabel-container .whitelabel-login {
+  width: 100%;
+  z-index: 2;
+  display: -ms-flexbox;
+  display: flex;
+  height: 70px;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+.whitelabel-template .whitelabel-container .whitelabel-login a {
+  margin: auto;
+  height: 100%;
+  display: block;
+}
+.whitelabel-template .whitelabel-container .whitelabel-login img {
+  padding: 10px;
+  width: auto;
+  max-height: 100%;
+}
+.whitelabel-template .carousel-wrapper {
+  width: 100%;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+  align-items: center;
+  position: relative;
+}
+.whitelabel-template .carousel-wrapper > div.owl-carousel {
+  width: calc(100% - 100px);
+  margin: auto;
+}
+.whitelabel-template .carousel-wrapper > .nav {
+  width: 50px;
+  height: 50px;
+  top: 100px;
+  position: absolute;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+  align-items: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  cursor: pointer;
+}
+.whitelabel-template .carousel-wrapper > .nav.nav-next {
+  right: 0px;
+}
+.whitelabel-template .carousel-wrapper > .nav.nav-prev {
+  left: 0px;
+}
+.whitelabel-template .whitelabel-tracks-title {
+  margin: 25px auto 0 auto;
+}
+.whitelabel-template .whitelabel-upcomings-title {
+  text-transform: uppercase;
+  margin: 40px auto 0 auto;
+}
+.whitelabel-template .whitelabel-tracks-title,
+.whitelabel-template .whitelabel-upcomings-title {
+  color: rgba(0, 0, 0, 0.8);
+  padding-bottom: 15px;
+  width: 100%;
+  font-family: 'Inter';
+  font-weight: 500;
+  font-size: 20px;
+  padding-left: 60px;
+  font-weight: bold;
+}
+.whitelabel-template .whitelabel-tracks {
+  display: -ms-flexbox;
+  display: flex;
+  max-width: 1410px;
+  width: 90%;
+  margin: 0 auto;
+  -ms-flex-align: center;
+  align-items: center;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+.whitelabel-template .whitelabel-tracks .item {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  margin: 0 10px 25px 10px;
+  text-decoration: none;
+  max-width: 300px;
+}
+.whitelabel-template .whitelabel-tracks .item.see-all {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -ms-flex-align: center;
+  align-items: center;
+  color: rgba(0, 0, 0, 0.8);
+  font-size: 16px;
+  font-weight: 500;
+}
+.whitelabel-template .whitelabel-tracks .item .card {
+  -ms-flex-align: center;
+  align-items: center;
+  border: none;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: center;
+  justify-content: center;
+  margin-bottom: 10px;
+  height: 218px;
+  width: 300px;
+}
+.whitelabel-template .whitelabel-tracks .item .card svg {
+  fill: white;
+  height: 32px;
+  width: 32px;
+  cursor: pointer;
+}
+.whitelabel-template .whitelabel-tracks .item .card-title {
+  color: #6e6d6d;
+  font-size: 1rem;
+  display: block;
+  font-size: 16px;
+  font-family: 'Inter';
+  -webkit-font-smoothing: antialiased;
+  line-height: 1.4em;
+  overflow-wrap: break-word;
+}
+.whitelabel-template .whitelabel-tracks .item .card-start-time {
+  color: white;
+  font-family: 'Inter';
+  -webkit-font-smoothing: antialiased;
+  line-height: 1.4em;
+  display: block;
+  font-size: 14px;
+}
+.whitelabel-template .whitelabel-contact {
+  -ms-flex-align: center;
+  align-items: center;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-top: 30px;
+  padding: 10px;
+}
+.whitelabel-template .whitelabel-contact .whitelabel-contact-container {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  margin: 0 auto;
+  max-width: 1300px;
+  width: 90%;
+  -ms-flex-align: center;
+  align-items: center;
+}
+.whitelabel-template
+  .whitelabel-contact
+  .whitelabel-contact-container
+  .whitelabel-contact-text {
+  width: 50%;
+}
+.whitelabel-template
+  .whitelabel-contact
+  .whitelabel-contact-container
+  .whitelabel-contact-text
+  h3 {
+  color: white;
+  font-family: 'Inter';
+  -webkit-font-smoothing: antialiased;
+  line-height: 1.4em;
+  font-size: 55px;
+  font-weight: 600;
+  line-height: 1em;
+  margin: 0 0 20px 0;
+  padding: 0;
+  width: 600px;
+}
+.whitelabel-template
+  .whitelabel-contact
+  .whitelabel-contact-container
+  .whitelabel-contact-text
+  p {
+  color: white;
+  font-family: 'Inter';
+  -webkit-font-smoothing: antialiased;
+  line-height: 1.4em;
+  font-size: 22px;
+  font-weight: 400;
+  width: 500px;
+}
+.whitelabel-template
+  .whitelabel-contact
+  .whitelabel-contact-container
+  .whitelabel-contact-form {
+  -ms-flex-align: center;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.3);
+  border-radius: 5px;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  padding: 20px;
+  width: 350px;
+}
+.whitelabel-template
+  .whitelabel-contact
+  .whitelabel-contact-container
+  .whitelabel-contact-form
+  input,
+.whitelabel-template
+  .whitelabel-contact
+  .whitelabel-contact-container
+  .whitelabel-contact-form
+  textarea {
+  font-family: 'Inter';
+  -webkit-font-smoothing: antialiased;
+  line-height: 1.4em;
+  border-radius: 3px;
+  border: 0;
+  margin-bottom: 20px;
+  width: 100%;
+  padding: 10px;
+}
+.whitelabel-template
+  .whitelabel-contact
+  .whitelabel-contact-container
+  .whitelabel-contact-form
+  input {
+  height: 40px;
+}
+.whitelabel-template
+  .whitelabel-contact
+  .whitelabel-contact-container
+  .whitelabel-contact-form
+  textarea {
+  height: 100px;
+}
+.whitelabel-template
+  .whitelabel-contact
+  .whitelabel-contact-container
+  .whitelabel-contact-form
+  .whitelabel-btn {
+  -ms-flex-item-align: center;
+  -ms-grid-row-align: center;
+  align-self: center;
+  border: none;
+  border-radius: 3px;
+  font-size: 16px;
+  height: 51px;
+  line-height: 51px;
+  margin-top: 20px;
+  text-align: center;
+  width: 100%;
+  font-weight: 500;
+}
+.whitelabel-template
+  .whitelabel-contact
+  .whitelabel-contact-container
+  .whitelabel-contact-form
+  .whitelabel-form-field-error {
+  display: block;
+  width: 100%;
+  color: #f22a47;
+  margin-bottom: 20px;
+  margin-top: -20px;
+  /* hack */
+}
+.whitelabel-template .whitelabel-footer .whitelabel-contact {
+  background-size: cover;
+  height: 450px;
+}
+.whitelabel-template .whitelabel-footer .whitelabel-footer-container {
+  max-width: 1300px;
+  width: 90%;
+  margin: 0 auto;
+  padding: 50px 0;
+}
+.whitelabel-template
+  .whitelabel-footer
+  .whitelabel-footer-container
+  .whitelabel-footer-logo {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -ms-flex-align: center;
+  align-items: center;
+}
+.whitelabel-template
+  .whitelabel-footer
+  .whitelabel-footer-container
+  .whitelabel-footer-logo
+  > a {
+  display: block;
+  height: 60px;
+}
+.whitelabel-template
+  .whitelabel-footer
+  .whitelabel-footer-container
+  .whitelabel-footer-logo
+  img {
+  -ms-flex-item-align: center;
+  -ms-grid-row-align: center;
+  align-self: center;
+  max-width: 100%;
+  width: auto;
+  max-height: 100%;
+}
+.whitelabel-template
+  .whitelabel-footer
+  .whitelabel-footer-container
+  .whitelabel-footer-logo
+  .whitelabel-footer-social-icons
+  a {
+  text-decoration: none;
+}
+.whitelabel-template
+  .whitelabel-footer
+  .whitelabel-footer-container
+  .whitelabel-footer-logo
+  .whitelabel-footer-social-icons
+  a
+  svg {
+  fill: rgba(0, 0, 0, 0.8);
+  margin: 0 5px;
+}
+.whitelabel-template
+  .whitelabel-footer
+  .whitelabel-footer-container
+  .whitelabel-linebreak {
+  border: 0;
+  border-top: 1px solid #5b7f9b;
+  margin: 20px 0;
+  padding: 0;
+}
+.whitelabel-template
+  .whitelabel-footer
+  .whitelabel-footer-container
+  .whitelabel-copyright {
+  color: rgba(0, 0, 0, 0.8);
+  font-size: 11px;
+  margin: 10px 0;
+  padding: 0;
+}
+.whitelabel-template svg {
+  fill: #013662;
+}
+.whitelabel-template .whitelabel-tracks .item > label.card-title,
+.whitelabel-template .whitelabel-upcomings .item > label.card-title {
+  font-weight: 500;
+  color: #343434;
+}
+.whitelabel-template .whitelabel-tracks .item > label.card-start-time,
+.whitelabel-template .whitelabel-upcomings .item > label.card-start-time {
+  margin-top: 5px;
+  color: #535252;
+}
+.whitelabel-template .whitelabel-tracks .card-start-time,
+.whitelabel-template .whitelabel-upcomings .card-start-time {
+  color: #535252;
+}
+@media only screen and (max-width: 768px) {
+  body.whitelabel-template .whitelabel-container .whitelabel-login {
+    width: 100%;
+  }
+  body.whitelabel-template
+    .whitelabel-container
+    .whitelabel-login
+    .whitelabel-login-content {
+    width: 100%;
+    padding: 0 10%;
+  }
+  body.whitelabel-template
+    .whitelabel-container
+    .whitelabel-banner
+    .whitelabel-channel-description {
+    width: 100%;
+  }
+  body.whitelabel-template .whitelabel-container .whitelabel-upcomings {
+    width: 100%;
+  }
+  body.whitelabel-template .whitelabel-upcomings-title {
+    text-align: center;
+    width: 100%;
+    padding: 0;
+    margin: 25px 0 10px 0;
+  }
+  body.whitelabel-template .whitelabel-talks-upcoming {
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -ms-flex-pack: center;
+    justify-content: center;
+    width: 100%;
+  }
+  body.whitelabel-template .calendar {
+    margin-left: 0px !important;
+  }
+  body.whitelabel-template .whitelabel-tracks .item .card,
+  body.whitelabel-template
+    .whitelabel-upcomings
+    .whitelabel-talks-upcoming
+    .item
+    .card {
+    height: 140px;
+    width: 180px;
+  }
+  body.whitelabel-template .whitelabel-tracks .item .card a img,
+  body.whitelabel-template
+    .whitelabel-upcomings
+    .whitelabel-talks-upcoming
+    .item
+    .card
+    a
+    img {
+    height: 140px;
+    width: 180px;
+  }
+  body.whitelabel-template .whitelabel-tracks,
+  body.whitelabel-template .whitelabel-upcomings {
+    max-width: 1350px;
+    width: 90%;
+    -ms-flex-pack: center;
+    justify-content: center;
+    margin: auto;
+  }
+  body.whitelabel-template .whitelabel-tracks .item .card,
+  body.whitelabel-template .whitelabel-upcomings .item .card {
+    border: none;
+  }
+  body.whitelabel-template .whitelabel-tracks .item > label.card-title,
+  body.whitelabel-template .whitelabel-upcomings .item > label.card-title {
+    font-size: 16px;
+  }
+  body.whitelabel-template .whitelabel-tracks .item > label.card-start-time,
+  body.whitelabel-template .whitelabel-upcomings .item > label.card-start-time {
+    margin-top: 5px;
+    font-size: 14px;
+  }
+  body.whitelabel-template .whitelabel-tracks .whitelabel-tracks-title,
+  body.whitelabel-template .whitelabel-upcomings .whitelabel-tracks-title {
+    text-align: center;
+    width: 100%;
+    padding: 0;
+    margin: 20px 0 10px 0;
+  }
+  body.whitelabel-template .whitelabel-contact.whitelabel-contact {
+    width: 100%;
+    height: 820px;
+  }
+  body.whitelabel-template
+    .whitelabel-contact.whitelabel-contact
+    .whitelabel-contact-container {
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -ms-flex-pack: center;
+    justify-content: center;
+    width: 100%;
+    height: 550px;
+  }
+  body.whitelabel-template
+    .whitelabel-contact.whitelabel-contact
+    .whitelabel-contact-container
+    .whitelabel-contact-text {
+    width: 100%;
+    padding: 20px;
+    margin: 0;
+    top: 0;
+  }
+  body.whitelabel-template
+    .whitelabel-contact.whitelabel-contact
+    .whitelabel-contact-container
+    .whitelabel-contact-text
+    h3 {
+    margin-top: 5px;
+    font-size: 38px;
+    width: 100%;
+    text-align: center;
+  }
+  body.whitelabel-template
+    .whitelabel-contact.whitelabel-contact
+    .whitelabel-contact-container
+    .whitelabel-contact-text
+    h2 {
+    font-size: 55px;
+  }
+  body.whitelabel-template
+    .whitelabel-contact.whitelabel-contact
+    .whitelabel-contact-container
+    .whitelabel-contact-text
+    p {
+    font-size: 18px;
+    width: 100%;
+    text-align: center;
+  }
+  body.whitelabel-template
+    .whitelabel-contact.whitelabel-contact
+    .whitelabel-contact-container
+    .whitelabel-contact-form {
+    width: 100%;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    height: 100%;
+    padding: 20px !important;
+    -ms-flex-pack: unset;
+    justify-content: unset;
+  }
+  body.whitelabel-template
+    .whitelabel-contact.whitelabel-contact
+    .whitelabel-contact-container
+    .whitelabel-contact-form
+    > div {
+    width: 100%;
+    height: unset;
+  }
+  body.whitelabel-template
+    .whitelabel-contact.whitelabel-contact
+    .whitelabel-contact-container
+    .whitelabel-contact-form
+    button {
+    right: unset;
+    width: calc(100% - 40px);
+  }
+  body.whitelabel-template .whitelabel-footer {
+    height: initial;
+    padding: 0 30px;
+  }
+  body.whitelabel-template .whitelabel-footer .whitelabel-footer-logo {
+    -ms-flex-flow: column;
+    flex-flow: column;
+  }
+  body.whitelabel-template
+    .whitelabel-footer
+    .whitelabel-footer-logo
+    .whitelabel-footer-social-icons {
+    margin-top: 20px;
+  }
+  body.whitelabel-template .whitelabel-footer .whitelabel-footer-logo img {
+    max-height: 70px;
+  }
+  body.whitelabel-template .whitelabel-footer .whitelabel-footer-container {
+    padding: 20px 0;
+    width: 100%;
+  }
+  body.whitelabel-template .carousel-wrapper > div.owl-carousel {
+    width: 100%;
+    margin: auto;
+  }
+  body.whitelabel-template .carousel-wrapper > .nav {
+    display: none;
+  }
+}
