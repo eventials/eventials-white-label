@@ -1,33 +1,135 @@
 import * as React from 'react';
-import Carousel from 'react-bootstrap/Carousel';
+import {
+  Container,
+  StyledCarousel,
+  Item,
+  Title,
+  CardTitle,
+  CardData,
+} from './styles';
 
-function WebinarsCarousel() {
+interface WebinarsCarouselProps {
+  title: string;
+}
+
+function WebinarsCarousel({ title }: WebinarsCarouselProps) {
   return (
-    <Carousel>
-      <Carousel.Item>
-        <img
-          className="d-block w-100"
-          src="https://s3.amazonaws.com/static.eventials.com/whitelabel-snd/Banner2.jpg"
-          alt="First slide"
-        />
-        {/* <Carousel.Caption>
-          <h3>First slide label</h3>
-          <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
-        </Carousel.Caption> */}
-      </Carousel.Item>
-      <Carousel.Item>
-        <img
-          className="d-block w-100"
-          src="https://s3.amazonaws.com/static.eventials.com/whitelabel-snd/Banner1.jpg"
-          alt="Third slide"
-        />
+    <Container>
+      <Title>{title}</Title>
+      <StyledCarousel indicators={false} fade slide={false}>
+        <StyledCarousel.Item
+          style={{
+            display: 'flex',
+            flexDirection: 'row',
+            alignItems: 'center',
+            justifyContent: 'center',
+            padding: '10px',
+          }}
+        >
+          <Item>
+            <img
+              className="d-block w-100"
+              src="https://static.eventials.com/media/thumb_cache/ca/11/ca1172d4e13cfb0b8f5c12b305f2a7db.jpg"
+              alt="First slide"
+            />
+            <CardTitle>Title</CardTitle>
+            <CardData>Data</CardData>
+          </Item>
+          <Item>
+            <img
+              className="d-block w-100"
+              src="https://static.eventials.com/media/thumb_cache/45/c0/45c0591f04d220d779722bba5c12a273.jpg"
+              alt="First slide"
+            />
+            <CardTitle>Title</CardTitle>
+            <CardData>Data</CardData>
+          </Item>
+          <Item>
+            <img
+              className="d-block w-100"
+              src="https://static.eventials.com/media/thumb_cache/f3/91/f3910d56bc0edfd0929023045431cbce.jpg"
+              alt="First slide"
+            />
+            <CardTitle>Title</CardTitle>
+            <CardData>Data</CardData>
+          </Item>
+          <Item>
+            <img
+              className="d-block w-100"
+              src="https://static.eventials.com/media/thumb_cache/f3/91/f3910d56bc0edfd0929023045431cbce.jpg"
+              alt="First slide"
+            />
+            <CardTitle>Title</CardTitle>
+            <CardData>Data</CardData>
+          </Item>
+          <Item>
+            <img
+              className="d-block w-100"
+              src="https://static.eventials.com/media/thumb_cache/f3/91/f3910d56bc0edfd0929023045431cbce.jpg"
+              alt="First slide"
+            />
+            <CardTitle>Title</CardTitle>
+            <CardData>Data</CardData>
+          </Item>
+        </StyledCarousel.Item>
+        <StyledCarousel.Item
+          style={{
+            display: 'flex',
+            flexDirection: 'row',
+            alignItems: 'center',
+            justifyContent: 'center',
+            padding: '10px',
+          }}
+        >
+          <Item>
+            <img
+              className="d-block w-100"
+              src="https://static.eventials.com/media/thumb_cache/f3/91/f3910d56bc0edfd0929023045431cbce.jpg"
+              alt="First slide"
+            />
+            <CardTitle>Title</CardTitle>
+            <CardData>Data</CardData>
+          </Item>
+          <Item>
+            <img
+              className="d-block w-100"
+              src="https://static.eventials.com/media/thumb_cache/f3/91/f3910d56bc0edfd0929023045431cbce.jpg"
+              alt="First slide"
+            />
+            <CardTitle>Title</CardTitle>
+            <CardData>Data</CardData>
+          </Item>
 
-        {/* <Carousel.Caption>
-          <h3>Second slide label</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-        </Carousel.Caption> */}
-      </Carousel.Item>
-    </Carousel>
+          <Item>
+            <img
+              className="d-block w-100"
+              src="https://static.eventials.com/media/thumb_cache/45/c0/45c0591f04d220d779722bba5c12a273.jpg"
+              alt="First slide"
+            />
+            <CardTitle>Title</CardTitle>
+            <CardData>Data</CardData>
+          </Item>
+          <Item>
+            <img
+              className="d-block w-100"
+              src="https://static.eventials.com/media/thumb_cache/f3/91/f3910d56bc0edfd0929023045431cbce.jpg"
+              alt="First slide"
+            />
+            <CardTitle>Title</CardTitle>
+            <CardData>Data</CardData>
+          </Item>
+          <Item>
+            <img
+              className="d-block w-100"
+              src="https://static.eventials.com/media/thumb_cache/f3/91/f3910d56bc0edfd0929023045431cbce.jpg"
+              alt="First slide"
+            />
+            <CardTitle>Title</CardTitle>
+            <CardData>Data</CardData>
+          </Item>
+        </StyledCarousel.Item>
+      </StyledCarousel>
+    </Container>
   );
 }
 
