@@ -32,8 +32,8 @@ function WebinarsCarousel({ title }: WebinarsCarouselProps) {
               src="https://static.eventials.com/media/thumb_cache/ca/11/ca1172d4e13cfb0b8f5c12b305f2a7db.jpg"
               alt="First slide"
             />
-            <CardTitle>Title</CardTitle>
-            <CardData>Data</CardData>
+            <CardTitle>Argumentos comerciais para venda de Lenovo</CardTitle>
+            <CardData>30/06/2020 ás 11:30</CardData>
           </Item>
           <Item>
             <img
@@ -41,8 +41,8 @@ function WebinarsCarousel({ title }: WebinarsCarouselProps) {
               src="https://static.eventials.com/media/thumb_cache/45/c0/45c0591f04d220d779722bba5c12a273.jpg"
               alt="First slide"
             />
-            <CardTitle>Title</CardTitle>
-            <CardData>Data</CardData>
+            <CardTitle>Argumentos comerciais para venda de Lenovo</CardTitle>
+            <CardData>30/06/2020 ás 11:30</CardData>
           </Item>
           <Item>
             <img
@@ -50,8 +50,8 @@ function WebinarsCarousel({ title }: WebinarsCarouselProps) {
               src="https://static.eventials.com/media/thumb_cache/f3/91/f3910d56bc0edfd0929023045431cbce.jpg"
               alt="First slide"
             />
-            <CardTitle>Title</CardTitle>
-            <CardData>Data</CardData>
+            <CardTitle>Argumentos comerciais para venda de Lenovo</CardTitle>
+            <CardData>30/06/2020 ás 11:30</CardData>
           </Item>
           <Item>
             <img
@@ -59,8 +59,8 @@ function WebinarsCarousel({ title }: WebinarsCarouselProps) {
               src="https://static.eventials.com/media/thumb_cache/f3/91/f3910d56bc0edfd0929023045431cbce.jpg"
               alt="First slide"
             />
-            <CardTitle>Title</CardTitle>
-            <CardData>Data</CardData>
+            <CardTitle>Argumentos comerciais para venda de Lenovo</CardTitle>
+            <CardData>30/06/2020 ás 11:30</CardData>
           </Item>
           <Item>
             <img
@@ -68,8 +68,8 @@ function WebinarsCarousel({ title }: WebinarsCarouselProps) {
               src="https://static.eventials.com/media/thumb_cache/f3/91/f3910d56bc0edfd0929023045431cbce.jpg"
               alt="First slide"
             />
-            <CardTitle>Title</CardTitle>
-            <CardData>Data</CardData>
+            <CardTitle>Argumentos comerciais para venda de Lenovo</CardTitle>
+            <CardData>30/06/2020 ás 11:30</CardData>
           </Item>
         </StyledCarousel.Item>
         <StyledCarousel.Item
@@ -87,8 +87,8 @@ function WebinarsCarousel({ title }: WebinarsCarouselProps) {
               src="https://static.eventials.com/media/thumb_cache/f3/91/f3910d56bc0edfd0929023045431cbce.jpg"
               alt="First slide"
             />
-            <CardTitle>Title</CardTitle>
-            <CardData>Data</CardData>
+            <CardTitle>Argumentos comerciais para venda de Lenovo</CardTitle>
+            <CardData>30/06/2020 ás 11:30</CardData>
           </Item>
           <Item>
             <img
@@ -96,8 +96,8 @@ function WebinarsCarousel({ title }: WebinarsCarouselProps) {
               src="https://static.eventials.com/media/thumb_cache/f3/91/f3910d56bc0edfd0929023045431cbce.jpg"
               alt="First slide"
             />
-            <CardTitle>Title</CardTitle>
-            <CardData>Data</CardData>
+            <CardTitle>Argumentos comerciais para venda de Lenovo</CardTitle>
+            <CardData>30/06/2020 ás 11:30</CardData>
           </Item>
 
           <Item>
@@ -106,8 +106,8 @@ function WebinarsCarousel({ title }: WebinarsCarouselProps) {
               src="https://static.eventials.com/media/thumb_cache/45/c0/45c0591f04d220d779722bba5c12a273.jpg"
               alt="First slide"
             />
-            <CardTitle>Title</CardTitle>
-            <CardData>Data</CardData>
+            <CardTitle>Argumentos comerciais para venda de Lenovo</CardTitle>
+            <CardData>30/06/2020 ás 11:30</CardData>
           </Item>
           <Item>
             <img
@@ -115,8 +115,8 @@ function WebinarsCarousel({ title }: WebinarsCarouselProps) {
               src="https://static.eventials.com/media/thumb_cache/f3/91/f3910d56bc0edfd0929023045431cbce.jpg"
               alt="First slide"
             />
-            <CardTitle>Title</CardTitle>
-            <CardData>Data</CardData>
+            <CardTitle>Argumentos comerciais para venda de Lenovo</CardTitle>
+            <CardData>30/06/2020 ás 11:30</CardData>
           </Item>
           <Item>
             <img
@@ -124,8 +124,8 @@ function WebinarsCarousel({ title }: WebinarsCarouselProps) {
               src="https://static.eventials.com/media/thumb_cache/f3/91/f3910d56bc0edfd0929023045431cbce.jpg"
               alt="First slide"
             />
-            <CardTitle>Title</CardTitle>
-            <CardData>Data</CardData>
+            <CardTitle>Argumentos comerciais para venda de Lenovo</CardTitle>
+            <CardData>30/06/2020 ás 11:30</CardData>
           </Item>
         </StyledCarousel.Item>
       </StyledCarousel>
