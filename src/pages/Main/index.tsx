@@ -6,7 +6,6 @@ import Contact from 'components/Contact';
 import Footer from 'components/Footer';
 import WebinarCarousel from 'components/WebinarsCarousel';
 import * as React from 'react';
-import Container from 'react-bootstrap/Container';
 import {
   Description,
   StyledContainer,
@@ -24,7 +23,7 @@ function Main() {
         <Toolbar>
           <a href="https://eventials.com">
             <img
-              src="https://s3.amazonaws.com/static.eventials.com/whitelabel-snd/logo.png"
+              src="https://s3.amazonaws.com/dev-assets.eventials.com/logo.png"
               alt="logo"
             />
           </a>
@@ -32,33 +31,31 @@ function Main() {
 
         <BannerCarousel />
 
-        <Container>
-          <Description>
-            <img
-              src="https://s3.amazonaws.com/static.eventials.com/whitelabel-snd/banner_texto_vazio_cortado.png"
-              alt="Description"
-            />
-            <TextDescription>
-              <p>
-                Bem-vindo a <b style={{ color: '#ff4d1f' }}>Universidade</b>
-                <span style={{ fontWeight: 700 }}> SND</span>, o canal que
-                proporciona conhecimento aos nossos clientes.
-              </p>
-              <p>
-                Compartilhamos expertise e apoiamos o seu desenvolvimento. Aqui
-                você confere conteúdos recentes sobre os principais fabricantes
-                de tecnologia, de qualquer dispositivo e em qualquer lugar.
-              </p>
-              <p>
-                Uma grande parte dos nossos vídeos são interativos, mas é você
-                quem faz a sua rotina e quem dita o calendário.
-              </p>
-              <p>
-                <span style={{ fontWeight: 700 }}>Aproveite!</span>
-              </p>
-            </TextDescription>
-          </Description>
-        </Container>
+        <Description>
+          <img
+            src="https://s3.amazonaws.com/static.eventials.com/whitelabel-snd/banner_texto_vazio_cortado.png"
+            alt="Description"
+          />
+          <TextDescription>
+            <p>
+              Bem-vindo a <b style={{ color: '#ff4d1f' }}>Universidade</b>
+              <span style={{ fontWeight: 700 }}> SND</span>, o canal que
+              proporciona conhecimento aos nossos clientes.
+            </p>
+            <p>
+              Compartilhamos expertise e apoiamos o seu desenvolvimento. Aqui
+              você confere conteúdos recentes sobre os principais fabricantes de
+              tecnologia, de qualquer dispositivo e em qualquer lugar.
+            </p>
+            <p>
+              Uma grande parte dos nossos vídeos são interativos, mas é você
+              quem faz a sua rotina e quem dita o calendário.
+            </p>
+            <p>
+              <span style={{ fontWeight: 700 }}>Aproveite!</span>
+            </p>
+          </TextDescription>
+        </Description>
 
         <WebinarCarousel title="Cloud" />
         <WebinarCarousel title="Cibersegurança" />
@@ -78,7 +75,7 @@ function Main() {
           <div className="card-event {% if forloop.counter0 > 2 %}card-event-hidden{% endif %}">
             <div className="image">
               <img
-                src="https://static.eventials.com/media/thumb_cache/ca/11/ca1172d4e13cfb0b8f5c12b305f2a7db.jpg"
+                src="https://static.eventials.com/media/thumb_cache/ca/ll11/ca1172d4e13cfb0b8f5c12b305f2a7db.jpg"
                 alt="event"
               />
             </div>

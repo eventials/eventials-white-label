@@ -21,6 +21,17 @@ export const Description = styled.div`
   > img {
     height: 300px;
   }
+
+  @media (max-width: 800px) {
+    flex-direction: column;
+    font-size: 12pt;
+    padding: 0px;
+
+    > img {
+      visibility: hidden;
+      height: 0px;
+    }
+  }
 `;
 
 export const Webinars = styled.div`
@@ -173,4 +184,30 @@ export const Toolbar = styled.div`
   height: 70px;
   -ms-flex-pack: center;
   justify-content: center;
+
+  > a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    > img {
+      height: 70%;
+    }
+  }
+
+  @media (max-width: 800px) {
+    flex-direction: column;
+    font-size: 12pt;
+    padding: 0px;
+
+    > a {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      > img {
+        height: 50%;
+      }
+    }
+  }
 `;
