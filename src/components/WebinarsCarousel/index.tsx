@@ -21,13 +21,12 @@ function WebinarsCarousel({ title }: WebinarsCarouselProps) {
 
   const handleLayoutChange = () => {
     const currentWidth = window.innerWidth;
-    console.log(currentWidth);
 
     if (currentWidth < 1000 && currentWidth > 600) {
       setNumberCards(4);
     } else if (currentWidth < 600 && currentWidth > 500) {
       setNumberCards(3);
-    } else if (currentWidth < 500) {
+    } else if (currentWidth < 500 && currentWidth > 400) {
       setNumberCards(2);
     } else if (currentWidth < 400) {
       setNumberCards(1);
