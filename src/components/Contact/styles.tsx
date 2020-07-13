@@ -6,17 +6,18 @@ export const StyledContainer = styled.div`
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   width: 100%;
   height: 350px;
   background-image: url('https://s3.amazonaws.com/static.eventials.com/whitelabel-snd/background_formulario.png');
-  padding: 15px;
+  background-position: 'center';
+  background-size: 100%;
 `;
 
 export const ContainerTitleContact = styled.div`
   display: flex;
   flex-direction: column;
-  margin: 0px 40px 0px 40px;
+  margin-right: 100px;
 
   > img {
     width: 300px;
@@ -45,7 +46,7 @@ export const ContainerContact = styled.div`
   flex-direction: column;
   padding: 20px;
   width: 300px;
-  margin-right: 60px;
+  margin-left: 100px;
 `;
 
 export const StyledButton = styled(Button)`
