@@ -14,4 +14,15 @@ export const StyledContainer = styled.div`
       margin: 0 5px;
     }
   }
+
+  @media (max-width: 1100px) {
+    align-items: center;
+    > a {
+      margin: 0px;
+      > svg {
+        padding: 5px;
+        margin: 0;
+      }
+    }
+  }
 `;
