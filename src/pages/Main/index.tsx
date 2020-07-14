@@ -7,6 +7,12 @@ import Footer from 'components/Footer';
 import WebinarCarousel from 'components/WebinarsCarousel';
 import * as React from 'react';
 import {
+  generateToken,
+  listAllWebinars,
+  listCategories,
+  getCurrentUser,
+} from 'services/requests';
+import {
   Description,
   StyledContainer,
   TextDescription,
@@ -14,6 +20,21 @@ import {
 } from './styles';
 
 function Main() {
+  React.useEffect(() => {
+    async function fetchData() {
+      // await generateToken(
+      //   'd5b204bed8024dde9c86836319f3849b',
+      //   'b4f6568ca2534c23acdf728e0e717a71',
+      // );
+
+      await getCurrentUser();
+      await listCategories();
+      await listAllWebinars();
+    }
+
+    fetchData();
+  }, []);
+
   return (
     <>
       {/* <div className="loading">
