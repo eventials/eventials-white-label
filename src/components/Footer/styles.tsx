@@ -1,6 +1,4 @@
 import styled from 'styled-components';
-import Form from 'react-bootstrap/Form';
-import Button from 'react-bootstrap/Button';
 
 export const StyledContainer = styled.div`
   display: flex;
@@ -14,55 +12,59 @@ export const StyledContainer = styled.div`
   color: #fff;
 `;
 
-export const ContainerTitleContact = styled.div`
+export const ContainerTop = styled.div`
   display: flex;
-  flex-direction: column;
-  margin: 0px 40px 0px 40px;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 70%;
 
-  > img {
-    width: 300px;
-    margin-bottom: 30px;
+  > a {
+    > img {
+      width: 120px;
+    }
   }
 
-  > h2 {
-    color: #43464a;
-    font-size: 22px;
-    font-family: 'Inter';
+  > div {
+    > ul {
+      font-size: 12px;
+      list-style: none;
+    }
+  }
+
+  @media (max-width: 750px) {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    > a {
+      > img {
+        margin-top: 20px;
+        width: 100px;
+      }
+    }
+
+    > div {
+      margin-top: 10px;
+      > ul {
+        font-size: 10px;
+        list-style: none;
+      }
+    }
+  }
+`;
+
+export const ContainerBottom = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 70%;
+
+  > p {
+    font-size: 12px;
+  }
+
+  @media (max-width: 1000px) {
     width: 90%;
   }
 `;
-
-export const ContainerContact = styled.div`
-  padding: 20px;
-  opacity: 0.95;
-  border-radius: 5px;
-  -ms-flex-align: center;
-  align-items: center;
-  background: #152e4d;
-  border-radius: 5px;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  padding: 20px;
-  width: 300px;
-  margin-right: 60px;
-`;
-
-export const StyledButton = styled(Button)`
-  width: 100%;
-  height: 55px;
-  background-color: #ff4d1f;
-  border-color: #ff4d1f;
-  color: white;
-  text-transform: uppercase;
-  font-size: 17px;
-
-  &:hover {
-    background-color: #ff4d1f;
-    border-color: #ff4d1f;
-    opacity: 0.9;
-  }
-`;
-
-export const StyledForm = styled(Form)``;

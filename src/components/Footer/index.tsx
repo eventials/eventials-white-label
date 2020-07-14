@@ -1,45 +1,35 @@
 import * as React from 'react';
 import SocialMedia from 'components/SocialMedia';
-import { StyledContainer } from './styles';
+import { StyledContainer, ContainerTop, ContainerBottom } from './styles';
 
 function Footer() {
   return (
     <StyledContainer>
-      <div
-        style={{
-          display: 'flex',
-          flexDirection: 'row',
-          justifyContent: 'space-between',
-          width: '100%',
-        }}
-      >
+      <ContainerTop>
         <a href="https://eventials.com">
           <img
-            className="whitelabel-logo"
             src="https://s3.amazonaws.com/static.eventials.com/whitelabel-snd/logo.png"
             alt="logo"
           />
         </a>
-        <div className="whitelabel-footer-info">
-          <ul style={{ listStyle: 'none' }}>
+        <div>
+          <ul>
             <li>SND DISTRIBUIÇÃO DE PRODUTOS DE INFORMÁTICA SA</li>
             <li>AV. COPACABANA, 238 – BARUERI – SP - 06472-001</li>
             <li>Tel.: (11) 2187-8400</li>
           </ul>
         </div>
         <SocialMedia />
-      </div>
+      </ContainerTop>
 
-      <div style={{ width: '100%' }}>
-        <hr style={{ backgroundColor: '#fff' }} />
+      <ContainerBottom>
+        <hr style={{ backgroundColor: '#fff', width: '100%' }} />
 
-        <p className="whitelabel-copyright">
+        <p style={{ width: '100%' }}>
           Powered by Eventials Plataforma de Webinars
         </p>
-        <p className="snd-copyright">
-          Copyright © . Todos os direitos reservados.
-        </p>
-      </div>
+        <p>Copyright © . Todos os direitos reservados.</p>
+      </ContainerBottom>
     </StyledContainer>
   );
 }
