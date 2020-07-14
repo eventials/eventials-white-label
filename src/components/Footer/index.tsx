@@ -1,17 +1,24 @@
 import * as React from 'react';
 import SocialMedia from 'components/SocialMedia';
-import { StyledContainer, ContainerTop, ContainerBottom } from './styles';
+import {
+  StyledContainer,
+  ContainerTop,
+  ContainerBottom,
+  ContainerText,
+} from './styles';
 
 function Footer() {
   return (
     <StyledContainer>
       <ContainerTop>
-        <a href="https://eventials.com">
-          <img
-            src="https://s3.amazonaws.com/static.eventials.com/whitelabel-snd/logo.png"
-            alt="logo"
-          />
-        </a>
+        <div>
+          <a href="https://eventials.com">
+            <img
+              src="https://s3.amazonaws.com/dev-assets.eventials.com/logo.png"
+              alt="logo"
+            />
+          </a>
+        </div>
         <div>
           <ul>
             <li>SND DISTRIBUIÇÃO DE PRODUTOS DE INFORMÁTICA SA</li>
@@ -19,16 +26,18 @@ function Footer() {
             <li>Tel.: (11) 2187-8400</li>
           </ul>
         </div>
-        <SocialMedia />
+        <div>
+          <SocialMedia />
+        </div>
       </ContainerTop>
 
       <ContainerBottom>
         <hr style={{ backgroundColor: '#fff', width: '100%' }} />
 
-        <p style={{ width: '100%' }}>
-          Powered by Eventials Plataforma de Webinars
-        </p>
-        <p>Copyright © . Todos os direitos reservados.</p>
+        <ContainerText>
+          <p>Powered by Eventials Plataforma de Webinars</p>
+          <p>Copyright © . Todos os direitos reservados.</p>
+        </ContainerText>
       </ContainerBottom>
     </StyledContainer>
   );
