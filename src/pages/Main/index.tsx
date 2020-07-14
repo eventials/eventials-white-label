@@ -26,9 +26,9 @@ function Main() {
       //   'd5b204bed8024dde9c86836319f3849b',
       //   'b4f6568ca2534c23acdf728e0e717a71',
       // );
-      await getCurrentUser();
-      await listCategories();
-      await listAllWebinars();
+      // await getCurrentUser();
+      // await listCategories();
+      // await listAllWebinars();
     }
 
     fetchData();

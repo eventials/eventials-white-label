@@ -19,7 +19,7 @@ export const Description = styled.div`
   line-height: 1em;
 
   > img {
-    height: 300px;
+    height: 270px;
   }
 
   @media (max-width: 800px) {

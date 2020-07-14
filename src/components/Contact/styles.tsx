@@ -1,6 +1,5 @@
-import styled from 'styled-components';
 import Form from 'react-bootstrap/Form';
-import Button from 'react-bootstrap/Button';
+import styled from 'styled-components';
 
 export const StyledContainer = styled.div`
   display: flex;
