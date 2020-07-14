@@ -120,20 +120,21 @@ export const ContainerContact = styled.div`
   }
 `;
 
-export const StyledButton = styled(Button)`
-  width: 100%;
-  height: 55px;
-  background-color: #ff4d1f;
-  border-color: #ff4d1f;
-  color: white;
-  text-transform: uppercase;
-  font-size: 17px;
-
-  &:hover {
+export const StyledForm = styled(Form)`
+  > button {
+    width: 100%;
+    height: 55px;
     background-color: #ff4d1f;
     border-color: #ff4d1f;
-    opacity: 0.9;
+    color: white;
+    text-transform: uppercase;
+    font-size: 17px;
+    border-radius: 4px;
+
+    &:hover {
+      background-color: #ff4d1f;
+      border-color: #ff4d1f;
+      opacity: 0.9;
+    }
   }
 `;
-
-export const StyledForm = styled(Form)``;
