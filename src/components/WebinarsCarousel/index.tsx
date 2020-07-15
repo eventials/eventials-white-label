@@ -1,19 +1,24 @@
 import * as React from 'react';
 import ItemsCarousel from 'react-items-carousel';
+import moment from 'moment';
+import LiveIcon from 'assets/live.svg';
+import { configs } from 'configs/customizations';
 import {
+  CardDate,
+  CardTitle,
   Container,
   ContainerCarousel,
-  Title,
   Item,
-  CardTitle,
-  CardDate,
+  Title,
 } from './styles';
 
 interface WebinarsCarouselProps {
+  webinars: any;
+  live?: boolean;
   title: string;
 }
 
-function WebinarsCarousel({ title }: WebinarsCarouselProps) {
+function WebinarsCarousel({ title, webinars, live }: WebinarsCarouselProps) {
   const [activeItemIndex, setActiveItemIndex] = React.useState(0);
   const [numberCards, setNumberCards] = React.useState(0);
 
@@ -30,8 +35,10 @@ function WebinarsCarousel({ title }: WebinarsCarouselProps) {
       setNumberCards(2);
     } else if (currentWidth < 400) {
       setNumberCards(1);
-    } else {
+    } else if (currentWidth > 1600) {
       setNumberCards(6);
+    } else {
+      setNumberCards(5);
     }
   };
 
@@ -50,7 +57,17 @@ function WebinarsCarousel({ title }: WebinarsCarouselProps) {
   return (
     <Container>
       <ContainerCarousel>
-        <Title>{title}</Title>
+        <div style={{ display: 'flex', alignItems: 'center' }}>
+          {live && (
+            <img
+              src={LiveIcon}
+              alt="live"
+              width="30px"
+              style={{ marginRight: '10px' }}
+            />
+          )}
+          <Title>{title}</Title>
+        </div>
         <ItemsCarousel
           requestToChangeActive={setActiveItemIndex}
           activeItemIndex={activeItemIndex}
@@ -100,109 +117,46 @@ function WebinarsCarousel({ title }: WebinarsCarouselProps) {
             </svg>
           }
         >
-          <Item>
-            <img
-              className="d-block w-100"
-              src="https://static.eventials.com/media/thumb_cache/f3/91/f3910d56bc0edfd0929023045431cbce.jpg"
-              alt="First slide"
-            />
-            <CardTitle>
-              Como começar 2020 aumentando as vendas de Office e Windows
-            </CardTitle>
-            <CardDate>12/27/2019 at 03:00 p.m.</CardDate>
-          </Item>
-          <Item>
-            <img
-              className="d-block w-100"
-              src="https://static.eventials.com/media/thumb_cache/f3/91/f3910d56bc0edfd0929023045431cbce.jpg"
-              alt="First slide"
-            />
-            <CardTitle>
-              Como começar 2020 aumentando as vendas de Office e Windows
-            </CardTitle>
-            <CardDate>12/27/2019 at 03:00 p.m.</CardDate>
-          </Item>
-          <Item>
-            <img
-              className="d-block w-100"
-              src="https://static.eventials.com/media/thumb_cache/f3/91/f3910d56bc0edfd0929023045431cbce.jpg"
-              alt="First slide"
-            />
-            <CardTitle>
-              Como começar 2020 aumentando as vendas de Office e Windows
-            </CardTitle>
-            <CardDate>12/27/2019 at 03:00 p.m.</CardDate>
-          </Item>
-          <Item>
-            <img
-              className="d-block w-100"
-              src="https://static.eventials.com/media/thumb_cache/f3/91/f3910d56bc0edfd0929023045431cbce.jpg"
-              alt="First slide"
-            />
-            <CardTitle>
-              Como começar 2020 aumentando as vendas de Office e Windows
-            </CardTitle>
-            <CardDate>12/27/2019 at 03:00 p.m.</CardDate>
-          </Item>
-          <Item>
-            <img
-              className="d-block w-100"
-              src="https://static.eventials.com/media/thumb_cache/f3/91/f3910d56bc0edfd0929023045431cbce.jpg"
-              alt="First slide"
-            />
-            <CardTitle>
-              Como começar 2020 aumentando as vendas de Office e Windows
-            </CardTitle>
-            <CardDate>12/27/2019 at 03:00 p.m.</CardDate>
-          </Item>
-          <Item>
-            <img
-              className="d-block w-100"
-              src="https://static.eventials.com/media/thumb_cache/f3/91/f3910d56bc0edfd0929023045431cbce.jpg"
-              alt="First slide"
-            />
-            <CardTitle>
-              Como começar 2020 aumentando as vendas de Office e Windows
-            </CardTitle>
-            <CardDate>12/27/2019 at 03:00 p.m.</CardDate>
-          </Item>
-          <Item>
-            <img
-              className="d-block w-100"
-              src="https://static.eventials.com/media/thumb_cache/f3/91/f3910d56bc0edfd0929023045431cbce.jpg"
-              alt="First slide"
-            />
-            <CardTitle>
-              Como começar 2020 aumentando as vendas de Office e Windows
-            </CardTitle>
-            <CardDate>12/27/2019 at 03:00 p.m.</CardDate>
-          </Item>
-          <Item>
-            <img
-              className="d-block w-100"
-              src="https://static.eventials.com/media/thumb_cache/f3/91/f3910d56bc0edfd0929023045431cbce.jpg"
-              alt="First slide"
-            />
-            <CardTitle>
-              Como começar 2020 aumentando as vendas de Office e Windows
-            </CardTitle>
-            <CardDate>12/27/2019 at 03:00 p.m.</CardDate>
-          </Item>
-          <Item>
-            <img
-              className="d-block w-100"
-              src="https://static.eventials.com/media/thumb_cache/f3/91/f3910d56bc0edfd0929023045431cbce.jpg"
-              alt="First slide"
-            />
-            <CardTitle>
-              Como começar 2020 aumentando as vendas de Office e Windows
-            </CardTitle>
-            <CardDate>12/27/2019 at 03:00 p.m.</CardDate>
-          </Item>
+          {/* 
+const Moment = require('moment')
+const array = [{date:"2018-05-11"},{date:"2018-05-12"},{date:"2018-05-10"}]
+const sortedArray  = array.sort((a,b) => new Moment(a.date).format('YYYYMMDD') - new Moment(b.date).format('YYYYMMDD'))
+console.log(sortedArray) */}
+          {/* infosRows.filter(applyFilters).sort((a, b) => new Date(a.date) - new Date(b.date)).map((scheduling, index) => ( */}
+
+          {webinars
+            .reverse((a: any, b: any) => a.start_time + b.start_time)
+            .map(webinar => (
+              <a
+                href={webinar?.url}
+                key={webinar?.id}
+                rel="noreferrer"
+                style={{ textDecoration: 'none', cursor: 'pointer' }}
+              >
+                <Item>
+                  <img
+                    className="d-block w-100"
+                    src={webinar.cover || configs?.defaultImage}
+                    alt={webinar?.title}
+                  />
+
+                  <CardTitle>{webinar?.title}</CardTitle>
+                  <CardDate>
+                    {moment(webinar?.start_time)
+                      .locale('pt-br')
+                      .format('DD/MM/YYYY - hh:mm')}
+                  </CardDate>
+                </Item>
+              </a>
+            ))}
         </ItemsCarousel>
       </ContainerCarousel>
     </Container>
   );
 }
+
+WebinarsCarousel.defaultProps = {
+  live: false,
+};
 
 export default WebinarsCarousel;

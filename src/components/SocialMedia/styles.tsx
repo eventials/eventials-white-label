@@ -1,3 +1,4 @@
+import { configs } from 'configs/customizations';
 import styled from 'styled-components';
 
 export const StyledContainer = styled.div`
@@ -10,8 +11,19 @@ export const StyledContainer = styled.div`
     padding: 10px;
 
     > svg {
-      fill: #ff4d1f;
+      fill: ${configs?.second};
       margin: 0 5px;
+    }
+  }
+
+  @media (max-width: 1100px) {
+    align-items: center;
+    > a {
+      margin: 0px;
+      > svg {
+        padding: 5px;
+        margin: 0;
+      }
     }
   }
 `;

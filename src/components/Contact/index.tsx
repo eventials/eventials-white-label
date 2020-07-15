@@ -1,20 +1,17 @@
+import { configs } from 'configs/customizations';
 import * as React from 'react';
 import {
-  StyledContainer,
   ContainerContact,
-  StyledForm,
-  StyledButton,
   ContainerTitleContact,
+  StyledContainer,
+  StyledForm,
 } from './styles';
 
 function Contact() {
   return (
     <StyledContainer>
       <ContainerTitleContact>
-        <img
-          src="https://s3.amazonaws.com/static.eventials.com/whitelabel-snd/title_formulario.png"
-          alt="contact"
-        />
+        <img src={configs?.imageTitleContact} alt="contact" />
         <h2>
           Ficou com alguma dúvida sobre o conteúdo ou quer sugerir algum
           assunto?
@@ -34,7 +31,9 @@ function Contact() {
           <StyledForm.Group controlId="exampleForm.ControlTextarea1">
             <StyledForm.Control as="textarea" rows={3} placeholder="Message" />
           </StyledForm.Group>
-          <StyledButton>SEND</StyledButton>
+          <button type="button" onClick={() => {}}>
+            SEND
+          </button>
         </StyledForm>
       </ContainerContact>
     </StyledContainer>

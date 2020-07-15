@@ -6,7 +6,8 @@ const requestWithJwt = () => {
     headers: {
       Authorization: `Bearer ${getToken()}`,
       'Access-Control-Allow-Origin': '*',
-      'Access-Control-Headers': 'Content-Type, Application/json',
+      'Access-Control-Headers':
+        'Content-Type, Application/json, Origin,X-Requested-With,Content-Type,Accept,Cache-Control',
       'Access-Control-Allow-Methods':
         'GET, PUT, POST, DELETE, HEAD, OPTIONS, PATCH',
     },
@@ -39,7 +40,6 @@ export const listAllWebinars = async () => {
 
   try {
     const response = await api.get(`${url}`, requestWithJwt());
-    console.log(response);
     return response;
   } catch (error) {
     console.error(error);

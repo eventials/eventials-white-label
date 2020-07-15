@@ -1,38 +1,63 @@
-/* eslint-disable react/self-closing-comp */
-/* eslint-disable react/jsx-one-expression-per-line */
-/* eslint-disable jsx-a11y/label-has-associated-control */
 import BannerCarousel from 'components/BannerCarousel';
 import Contact from 'components/Contact';
 import Footer from 'components/Footer';
 import WebinarCarousel from 'components/WebinarsCarousel';
+import { configs } from 'configs/customizations';
 import * as React from 'react';
+import { listAllWebinars } from 'services/requests';
 import {
-  generateToken,
-  listAllWebinars,
-  listCategories,
-  getCurrentUser,
-} from 'services/requests';
-import {
+  ButtonSeeAll,
   Description,
+  SeeAll,
   StyledContainer,
   TextDescription,
   Toolbar,
 } from './styles';
 
 function Main() {
+  const [webinars, setWebinars] = React.useState([]);
+  const [liveWebinars, setLiveWebinars] = React.useState([]);
+
   React.useEffect(() => {
     async function fetchData() {
       // await generateToken(
       //   'd5b204bed8024dde9c86836319f3849b',
       //   'b4f6568ca2534c23acdf728e0e717a71',
       // );
+      // await getCurrentUser();
+      // await listCategories();
+      const response = await listAllWebinars();
 
-      await getCurrentUser();
-      await listCategories();
-      await listAllWebinars();
+      if (response?.status !== 200) {
+        console.log(`Falha na api, erro  ${response.status}`);
+        return;
+      }
+      const { data } = response;
+
+      const live = await data.filter(web => web?.state === 'live');
+
+      setLiveWebinars(live);
+      setWebinars(data);
     }
 
     fetchData();
+  }, []);
+
+  const handleLayoutChange = () => {
+    const currentWidth = window.innerWidth;
+    console.log(currentWidth);
+  };
+
+  React.useEffect(() => {
+    window.addEventListener('resize', () => {
+      handleLayoutChange();
+    });
+
+    return () => {
+      window.removeEventListener('resize', () => {
+        handleLayoutChange();
+      });
+    };
   }, []);
 
   return (
@@ -42,24 +67,18 @@ function Main() {
       </div> */}
       <StyledContainer>
         <Toolbar>
-          <a href="https://eventials.com">
-            <img
-              src="https://s3.amazonaws.com/dev-assets.eventials.com/logo.png"
-              alt="logo"
-            />
+          <a href={configs?.site}>
+            <img src={configs?.logo} alt="logo" />
           </a>
         </Toolbar>
 
         <BannerCarousel />
 
         <Description>
-          <img
-            src="https://s3.amazonaws.com/static.eventials.com/whitelabel-snd/banner_texto_vazio_cortado.png"
-            alt="Description"
-          />
+          <img src={configs?.descriptionImage} alt="Description" />
           <TextDescription>
             <p>
-              Bem-vindo a <b style={{ color: '#ff4d1f' }}>Universidade</b>
+              Bem-vindo a <b style={{ color: configs?.second }}>Universidade</b>
               <span style={{ fontWeight: 700 }}> SND</span>, o canal que
               proporciona conhecimento aos nossos clientes.
             </p>
@@ -78,42 +97,26 @@ function Main() {
           </TextDescription>
         </Description>
 
-        <WebinarCarousel title="Cloud" />
-        <WebinarCarousel title="Cibersegurança" />
-        <WebinarCarousel title="Networking" />
-        <WebinarCarousel title="Educação" />
-        <WebinarCarousel title="Institucional SND" />
-        <WebinarCarousel title="Colaboração" />
-        <WebinarCarousel title="Componentes" />
-        <WebinarCarousel title="Computadores e TVs" />
-        <WebinarCarousel title="Games e PC Gamer" />
-        <WebinarCarousel title="Softwares ESD e OEM" />
-        {/* <div className="event-title">
-          <h2>Calendário de Eventos</h2>
-        </div>
+        {webinars.length > 0 && (
+          <>
+            {liveWebinars.length > 0 && (
+              <WebinarCarousel title="Ao Vivo" webinars={liveWebinars} live />
+            )}
+            <WebinarCarousel title="Cloud" webinars={webinars} />
+            <WebinarCarousel title="Cibersegurança" webinars={webinars} />
+            <WebinarCarousel title="Networking" webinars={webinars} />
+          </>
+        )}
 
-        <div className="card-event-container">
-          <div className="card-event {% if forloop.counter0 > 2 %}card-event-hidden{% endif %}">
-            <div className="image">
-              <img
-                src="https://static.eventials.com/media/thumb_cache/ca/ll11/ca1172d4e13cfb0b8f5c12b305f2a7db.jpg"
-                alt="event"
-              />
-            </div>
-            <div className="content">
-              <div className="date">event.date</div>
-              <div className="name">event.name</div>
-              <div className="location">event.location</div>
-            </div>
-          </div>
-        </div>
         <SeeAll>
-          <ButtonSeeAll id="toggleEvents" href="https://eventials.com">
+          <ButtonSeeAll id="toggleEvents" href={configs?.allWebinars}>
             Ver todos
           </ButtonSeeAll>
-        </SeeAll> */}
+        </SeeAll>
 
-        <Contact />
+        {configs?.contact && <Contact />}
+
+        {configs?.contact && <Contact />}
 
         <Footer />
       </StyledContainer>

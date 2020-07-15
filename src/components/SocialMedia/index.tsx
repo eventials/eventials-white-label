@@ -1,20 +1,31 @@
 import * as React from 'react';
 import { StyledContainer } from './styles';
+import { configs } from 'configs/customizations';
 
 function SocialMedia() {
   return (
     <StyledContainer>
-      <a href="https://eventials.com" target="_blank" rel="noopener noreferrer">
-        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30">
+      <a href={configs?.youtube} target="_blank" rel="noopener noreferrer">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="30"
+          height="30"
+          viewBox="0 0 30 30"
+        >
           <path d="M15 0c8.28375 0 15 6.71625 15 15 0 8.28375-6.71625 15-15 15-8.28375 0-15-6.71625-15-15C0 6.71625 6.71625 0 15 0zm5.71125 8.14320863c-2.703-.19133353-8.72325-.19055575-11.4225 0C6.366 8.35009773 6.02175 10.1809885 6 15.0001045c.02175 4.8105605.363 6.649229 3.28875 6.8568959 2.7.1905557 8.7195.1913335 11.4225 0 2.92275-.2068891 3.267-2.0377799 3.28875-6.8568959-.02175-4.8105605-.363-6.64922899-3.28875-6.85689587zM12.75 18.1112188v-6.2222286l6 3.1056699-6 3.1165587z" />
         </svg>
       </a>
-      <a href="https://eventials.com" target="_blank" rel="noopener noreferrer">
-        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30">
+      <a href={configs?.linkedIn} target="_blank" rel="noopener noreferrer">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="30"
+          height="30"
+          viewBox="0 0 30 30"
+        >
           <path d="M15 0c8.28375 0 15 6.71625 15 15 0 8.28375-6.71625 15-15 15-8.28375 0-15-6.71625-15-15C0 6.71625 6.71625 0 15 0zm-4.68 8.63043478C10.32 7.73043478 9.58 7 8.66666667 7c-.91333334 0-1.65333334.73043478-1.65333334 1.63043478 0 .90065218.74 1.63043482 1.65333334 1.63043482C9.58 10.2608696 10.32 9.53108696 10.32 8.63043478zm.0133333 2.93478262H7V22h3.3333333V11.5652174zm5.3213334 0h-3.312V22h3.3126666v-5.4776087c0-3.0456522 4.0193334-3.2947826 4.0193334 0V22H23v-6.6071739c0-5.1391304-5.948-4.9519565-7.3453333-2.4221739v-1.4054348z" />
         </svg>
       </a>
-      <a href="https://eventials.com" target="_blank" rel="noopener noreferrer">
+      <a href={configs?.facebook} target="_blank" rel="noopener noreferrer">
         <svg
           width="30px"
           height="30px"
@@ -28,7 +39,7 @@ function SocialMedia() {
           />
         </svg>
       </a>
-      <a href="https://eventials.com" target="_blank" rel="noopener noreferrer">
+      <a href={configs?.instagram} target="_blank" rel="noopener noreferrer">
         <svg
           width="30px"
           height="30px"
