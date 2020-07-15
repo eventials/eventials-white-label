@@ -1,6 +1,7 @@
 import * as React from 'react';
 import { configs } from 'configs/customizations';
 import SocialMedia from 'components/SocialMedia';
+import { FormattedMessage } from 'react-intl';
 import {
   StyledContainer,
   ContainerTop,
@@ -35,8 +36,12 @@ function Footer() {
         />
 
         <ContainerText>
-          <p>Powered by Eventials Plataforma de Webinars</p>
-          <p>Copyright © . Todos os direitos reservados.</p>
+          <p>
+            <FormattedMessage id="development" />
+          </p>
+          <p>
+            Copyright © . <FormattedMessage id="copyright" />
+          </p>
         </ContainerText>
       </ContainerBottom>
     </StyledContainer>
