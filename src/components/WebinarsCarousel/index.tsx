@@ -1,6 +1,7 @@
 import * as React from 'react';
 import ItemsCarousel from 'react-items-carousel';
 import moment from 'moment';
+import LiveIcon from 'assets/live.svg';
 import {
   CardDate,
   CardTitle,
@@ -12,10 +13,11 @@ import {
 
 interface WebinarsCarouselProps {
   webinars: any;
+  live?: boolean;
   title: string;
 }
 
-function WebinarsCarousel({ title, webinars }: WebinarsCarouselProps) {
+function WebinarsCarousel({ title, webinars, live }: WebinarsCarouselProps) {
   const [activeItemIndex, setActiveItemIndex] = React.useState(0);
   const [numberCards, setNumberCards] = React.useState(0);
 
@@ -54,7 +56,17 @@ function WebinarsCarousel({ title, webinars }: WebinarsCarouselProps) {
   return (
     <Container>
       <ContainerCarousel>
-        <Title>{title}</Title>
+        <div style={{ display: 'flex', alignItems: 'center' }}>
+          {live && (
+            <img
+              src={LiveIcon}
+              alt="live"
+              width="30px"
+              style={{ marginRight: '10px' }}
+            />
+          )}
+          <Title>{title}</Title>
+        </div>
         <ItemsCarousel
           requestToChangeActive={setActiveItemIndex}
           activeItemIndex={activeItemIndex}
@@ -104,32 +116,49 @@ function WebinarsCarousel({ title, webinars }: WebinarsCarouselProps) {
             </svg>
           }
         >
-          {webinars.map(webinar => (
-            <a
-              href={webinar?.url}
-              key={webinar?.id}
-              rel="noreferrer"
-              style={{ textDecoration: 'none', cursor: 'pointer' }}
-            >
-              <Item>
-                <img
-                  className="d-block w-100"
-                  src="https://picsum.photos/200"
-                  alt={webinar?.title}
-                />
-                <CardTitle>{webinar?.title}</CardTitle>
-                <CardDate>
-                  {moment(webinar?.start_time)
-                    .locale('pt-br')
-                    .format('DD/MM/YYYY - hh:mm')}
-                </CardDate>
-              </Item>
-            </a>
-          ))}
+          {/* 
+const Moment = require('moment')
+const array = [{date:"2018-05-11"},{date:"2018-05-12"},{date:"2018-05-10"}]
+const sortedArray  = array.sort((a,b) => new Moment(a.date).format('YYYYMMDD') - new Moment(b.date).format('YYYYMMDD'))
+console.log(sortedArray) */}
+          {/* infosRows.filter(applyFilters).sort((a, b) => new Date(a.date) - new Date(b.date)).map((scheduling, index) => ( */}
+
+          {webinars
+            .reverse((a: any, b: any) => a.start_time + b.start_time)
+            .map(webinar => (
+              <a
+                href={webinar?.url}
+                key={webinar?.id}
+                rel="noreferrer"
+                style={{ textDecoration: 'none', cursor: 'pointer' }}
+              >
+                <Item>
+                  <img
+                    className="d-block w-100"
+                    src={
+                      webinar.cover ||
+                      'https://static-stg.eventials.com/static/images/placeholder-talk.png'
+                    }
+                    alt={webinar?.title}
+                  />
+
+                  <CardTitle>{webinar?.title}</CardTitle>
+                  <CardDate>
+                    {moment(webinar?.start_time)
+                      .locale('pt-br')
+                      .format('DD/MM/YYYY - hh:mm')}
+                  </CardDate>
+                </Item>
+              </a>
+            ))}
         </ItemsCarousel>
       </ContainerCarousel>
     </Container>
   );
 }
+
+WebinarsCarousel.defaultProps = {
+  live: false,
+};
 
 export default WebinarsCarousel;

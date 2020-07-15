@@ -5,25 +5,21 @@ import BannerCarousel from 'components/BannerCarousel';
 import Contact from 'components/Contact';
 import Footer from 'components/Footer';
 import WebinarCarousel from 'components/WebinarsCarousel';
-import * as React from 'react';
 import { configs } from 'configs/customizations';
+import * as React from 'react';
+import { listAllWebinars } from 'services/requests';
 import {
-  generateToken,
-  listAllWebinars,
-  listCategories,
-  getCurrentUser,
-} from 'services/requests';
-import {
+  ButtonSeeAll,
   Description,
+  SeeAll,
   StyledContainer,
   TextDescription,
   Toolbar,
-  SeeAll,
-  ButtonSeeAll,
 } from './styles';
 
 function Main() {
   const [webinars, setWebinars] = React.useState([]);
+  const [liveWebinars, setLiveWebinars] = React.useState([]);
 
   React.useEffect(() => {
     async function fetchData() {
@@ -37,8 +33,14 @@ function Main() {
 
       if (response?.status !== 200) {
         console.log(`Falha na api, erro  ${response.status}`);
+        return;
       }
-      setWebinars(response.data);
+      const { data } = response;
+
+      const live = await data.filter(web => web?.state === 'live');
+
+      setLiveWebinars(live);
+      setWebinars(data);
     }
 
     fetchData();
@@ -100,6 +102,7 @@ function Main() {
 
         {webinars.length > 0 && (
           <>
+            <WebinarCarousel title="Ao Vivo" webinars={liveWebinars} live />
             <WebinarCarousel title="Cloud" webinars={webinars} />
             <WebinarCarousel title="Cibersegurança" webinars={webinars} />
             <WebinarCarousel title="Networking" webinars={webinars} />
@@ -132,7 +135,7 @@ function Main() {
           </div>
         </div> */}
         <SeeAll>
-          <ButtonSeeAll id="toggleEvents" href="https://eventials.com">
+          <ButtonSeeAll id="toggleEvents" href={configs?.allWebinars}>
             Ver todos
           </ButtonSeeAll>
         </SeeAll>

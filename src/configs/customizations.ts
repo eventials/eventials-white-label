@@ -18,4 +18,5 @@ export const configs = {
   linkedIn: 'https://www.linkedin.com/company/snd/',
   facebook: 'https://www.facebook.com/SNDDistribuidora/',
   instagram: 'https://www.instagram.com/sndmais/',
+  allWebinars: 'https://www.eventials.com/SND/talks/',
 };

@@ -121,14 +121,20 @@ export const ButtonSeeAll = styled.a`
   padding: 20px;
   font-size: 16px;
   background-color: #152e4d;
-  color: white;
+  color: #fff;
   border-radius: 3px;
+  text-decoration: none;
   cursor: pointer;
   outline: none;
   border: none;
   text-align: center;
-  text-decoration: none;
   font-weight: 500;
+
+  &:hover {
+    background-color: #274b77;
+    color: #fff;
+    text-decoration: none;
+  }
 `;
 
 export const Item = styled.div`
