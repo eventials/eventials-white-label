@@ -1,4 +1,5 @@
 import * as React from 'react';
+import { configs } from 'configs/customizations';
 import SocialMedia from 'components/SocialMedia';
 import {
   StyledContainer,
@@ -12,18 +13,15 @@ function Footer() {
     <StyledContainer>
       <ContainerTop>
         <div>
-          <a href="https://eventials.com">
-            <img
-              src="https://s3.amazonaws.com/dev-assets.eventials.com/logo.png"
-              alt="logo"
-            />
+          <a href={configs?.site}>
+            <img src={configs?.logo} alt="logo" />
           </a>
         </div>
         <div>
           <ul>
-            <li>SND DISTRIBUIÇÃO DE PRODUTOS DE INFORMÁTICA SA</li>
-            <li>AV. COPACABANA, 238 – BARUERI – SP - 06472-001</li>
-            <li>Tel.: (11) 2187-8400</li>
+            <li>{configs?.name}</li>
+            <li>{configs?.adress}</li>
+            <li>{configs?.phone}</li>
           </ul>
         </div>
         <div>
