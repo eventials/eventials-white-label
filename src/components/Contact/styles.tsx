@@ -1,3 +1,4 @@
+import { configs } from 'configs/customizations';
 import Form from 'react-bootstrap/Form';
 import styled from 'styled-components';
 
@@ -8,7 +9,7 @@ export const StyledContainer = styled.div`
   justify-content: center;
   width: 100%;
   height: 400px;
-  background-image: url('https://s3.amazonaws.com/static.eventials.com/whitelabel-snd/background_formulario.png');
+  background-image: url('${configs?.bannerContact}');
   background-position: center center;
   background-repeat: no-repeat;
   background-size: 150% 100%;

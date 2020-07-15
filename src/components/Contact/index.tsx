@@ -1,3 +1,4 @@
+import { configs } from 'configs/customizations';
 import * as React from 'react';
 import {
   ContainerContact,
@@ -10,10 +11,7 @@ function Contact() {
   return (
     <StyledContainer>
       <ContainerTitleContact>
-        <img
-          src="https://s3.amazonaws.com/static.eventials.com/whitelabel-snd/title_formulario.png"
-          alt="contact"
-        />
+        <img src={configs?.imageTitleContact} alt="contact" />
         <h2>
           Ficou com alguma dúvida sobre o conteúdo ou quer sugerir algum
           assunto?
