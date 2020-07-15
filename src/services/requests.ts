@@ -40,7 +40,6 @@ export const listAllWebinars = async () => {
 
   try {
     const response = await api.get(`${url}`, requestWithJwt());
-    console.log(response);
     return response;
   } catch (error) {
     console.error(error);

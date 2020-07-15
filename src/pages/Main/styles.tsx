@@ -111,26 +111,24 @@ export const SeeAll = styled.div`
   display: -ms-flexbox;
   display: flex;
   width: 100%;
-  margin: 5px;
+  margin: 20px;
   -ms-flex-pack: center;
   justify-content: center;
 `;
 
 export const ButtonSeeAll = styled.a`
-  a > {
-    min-width: 200px;
-    padding: 20px;
-    font-size: 16px;
-    background-color: #152e4d;
-    color: white;
-    border-radius: 3px;
-    cursor: pointer;
-    outline: none;
-    border: none;
-    text-align: center;
-    text-decoration: none;
-    font-weight: 500;
-  }
+  min-width: 180px;
+  padding: 20px;
+  font-size: 16px;
+  background-color: #152e4d;
+  color: white;
+  border-radius: 3px;
+  cursor: pointer;
+  outline: none;
+  border: none;
+  text-align: center;
+  text-decoration: none;
+  font-weight: 500;
 `;
 
 export const Item = styled.div`

@@ -6,6 +6,7 @@ import Contact from 'components/Contact';
 import Footer from 'components/Footer';
 import WebinarCarousel from 'components/WebinarsCarousel';
 import * as React from 'react';
+import { configs } from 'configs/customizations';
 import {
   generateToken,
   listAllWebinars,
@@ -17,9 +18,13 @@ import {
   StyledContainer,
   TextDescription,
   Toolbar,
+  SeeAll,
+  ButtonSeeAll,
 } from './styles';
 
 function Main() {
+  const [webinars, setWebinars] = React.useState([]);
+
   React.useEffect(() => {
     async function fetchData() {
       // await generateToken(
@@ -28,7 +33,12 @@ function Main() {
       // );
       // await getCurrentUser();
       // await listCategories();
-      // await listAllWebinars();
+      const response = await listAllWebinars();
+
+      if (response?.status !== 200) {
+        console.log(`Falha na api, erro  ${response.status}`);
+      }
+      setWebinars(response.data);
     }
 
     fetchData();
@@ -58,21 +68,15 @@ function Main() {
       </div> */}
       <StyledContainer>
         <Toolbar>
-          <a href="https://eventials.com">
-            <img
-              src="https://s3.amazonaws.com/dev-assets.eventials.com/logo.png"
-              alt="logo"
-            />
+          <a href={configs?.site}>
+            <img src={configs?.logo} alt="logo" />
           </a>
         </Toolbar>
 
         <BannerCarousel />
 
         <Description>
-          <img
-            src="https://s3.amazonaws.com/static.eventials.com/whitelabel-snd/banner_texto_vazio_cortado.png"
-            alt="Description"
-          />
+          <img src={configs?.descriptionImage} alt="Description" />
           <TextDescription>
             <p>
               Bem-vindo a <b style={{ color: '#ff4d1f' }}>Universidade</b>
@@ -94,21 +98,25 @@ function Main() {
           </TextDescription>
         </Description>
 
-        <WebinarCarousel title="Cloud" />
-        <WebinarCarousel title="Cibersegurança" />
-        <WebinarCarousel title="Networking" />
-        <WebinarCarousel title="Educação" />
+        {webinars.length > 0 && (
+          <>
+            <WebinarCarousel title="Cloud" webinars={webinars} />
+            <WebinarCarousel title="Cibersegurança" webinars={webinars} />
+            <WebinarCarousel title="Networking" webinars={webinars} />
+          </>
+        )}
+        {/* <WebinarCarousel title="Educação" />
         <WebinarCarousel title="Institucional SND" />
         <WebinarCarousel title="Colaboração" />
         <WebinarCarousel title="Componentes" />
         <WebinarCarousel title="Computadores e TVs" />
         <WebinarCarousel title="Games e PC Gamer" />
-        <WebinarCarousel title="Softwares ESD e OEM" />
+        <WebinarCarousel title="Softwares ESD e OEM" /> */}
         {/* <div className="event-title">
           <h2>Calendário de Eventos</h2>
-        </div>
+        </div> */}
 
-        <div className="card-event-container">
+        {/* <div className="card-event-container">
           <div className="card-event {% if forloop.counter0 > 2 %}card-event-hidden{% endif %}">
             <div className="image">
               <img
@@ -122,12 +130,12 @@ function Main() {
               <div className="location">event.location</div>
             </div>
           </div>
-        </div>
+        </div> */}
         <SeeAll>
           <ButtonSeeAll id="toggleEvents" href="https://eventials.com">
             Ver todos
           </ButtonSeeAll>
-        </SeeAll> */}
+        </SeeAll>
 
         <Contact />
 
