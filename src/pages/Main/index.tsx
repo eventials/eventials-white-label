@@ -1,6 +1,3 @@
-/* eslint-disable react/self-closing-comp */
-/* eslint-disable react/jsx-one-expression-per-line */
-/* eslint-disable jsx-a11y/label-has-associated-control */
 import BannerCarousel from 'components/BannerCarousel';
 import Contact from 'components/Contact';
 import Footer from 'components/Footer';
