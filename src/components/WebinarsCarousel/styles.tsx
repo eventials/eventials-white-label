@@ -59,6 +59,7 @@ export const CardTitle = styled.label`
   -webkit-font-smoothing: antialiased;
   line-height: 1.4em;
   overflow-wrap: break-word;
+  cursor: pointer;
 
   @media (max-width: 900px) {
     font-size: 11px;
@@ -72,4 +73,5 @@ export const CardTitle = styled.label`
 export const CardDate = styled.label`
   color: #535252;
   font-size: 11px;
+  cursor: pointer;
 `;

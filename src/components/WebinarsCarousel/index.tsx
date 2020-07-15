@@ -1,19 +1,21 @@
 import * as React from 'react';
 import ItemsCarousel from 'react-items-carousel';
+import moment from 'moment';
 import {
+  CardDate,
+  CardTitle,
   Container,
   ContainerCarousel,
-  Title,
   Item,
-  CardTitle,
-  CardDate,
+  Title,
 } from './styles';
 
 interface WebinarsCarouselProps {
+  webinars: any;
   title: string;
 }
 
-function WebinarsCarousel({ title }: WebinarsCarouselProps) {
+function WebinarsCarousel({ title, webinars }: WebinarsCarouselProps) {
   const [activeItemIndex, setActiveItemIndex] = React.useState(0);
   const [numberCards, setNumberCards] = React.useState(0);
 
@@ -30,8 +32,10 @@ function WebinarsCarousel({ title }: WebinarsCarouselProps) {
       setNumberCards(2);
     } else if (currentWidth < 400) {
       setNumberCards(1);
-    } else {
+    } else if (currentWidth > 1600) {
       setNumberCards(6);
+    } else {
+      setNumberCards(5);
     }
   };
 
@@ -100,105 +104,28 @@ function WebinarsCarousel({ title }: WebinarsCarouselProps) {
             </svg>
           }
         >
-          <Item>
-            <img
-              className="d-block w-100"
-              src="https://static.eventials.com/media/thumb_cache/f3/91/f3910d56bc0edfd0929023045431cbce.jpg"
-              alt="First slide"
-            />
-            <CardTitle>
-              Como começar 2020 aumentando as vendas de Office e Windows
-            </CardTitle>
-            <CardDate>12/27/2019 at 03:00 p.m.</CardDate>
-          </Item>
-          <Item>
-            <img
-              className="d-block w-100"
-              src="https://static.eventials.com/media/thumb_cache/f3/91/f3910d56bc0edfd0929023045431cbce.jpg"
-              alt="First slide"
-            />
-            <CardTitle>
-              Como começar 2020 aumentando as vendas de Office e Windows
-            </CardTitle>
-            <CardDate>12/27/2019 at 03:00 p.m.</CardDate>
-          </Item>
-          <Item>
-            <img
-              className="d-block w-100"
-              src="https://static.eventials.com/media/thumb_cache/f3/91/f3910d56bc0edfd0929023045431cbce.jpg"
-              alt="First slide"
-            />
-            <CardTitle>
-              Como começar 2020 aumentando as vendas de Office e Windows
-            </CardTitle>
-            <CardDate>12/27/2019 at 03:00 p.m.</CardDate>
-          </Item>
-          <Item>
-            <img
-              className="d-block w-100"
-              src="https://static.eventials.com/media/thumb_cache/f3/91/f3910d56bc0edfd0929023045431cbce.jpg"
-              alt="First slide"
-            />
-            <CardTitle>
-              Como começar 2020 aumentando as vendas de Office e Windows
-            </CardTitle>
-            <CardDate>12/27/2019 at 03:00 p.m.</CardDate>
-          </Item>
-          <Item>
-            <img
-              className="d-block w-100"
-              src="https://static.eventials.com/media/thumb_cache/f3/91/f3910d56bc0edfd0929023045431cbce.jpg"
-              alt="First slide"
-            />
-            <CardTitle>
-              Como começar 2020 aumentando as vendas de Office e Windows
-            </CardTitle>
-            <CardDate>12/27/2019 at 03:00 p.m.</CardDate>
-          </Item>
-          <Item>
-            <img
-              className="d-block w-100"
-              src="https://static.eventials.com/media/thumb_cache/f3/91/f3910d56bc0edfd0929023045431cbce.jpg"
-              alt="First slide"
-            />
-            <CardTitle>
-              Como começar 2020 aumentando as vendas de Office e Windows
-            </CardTitle>
-            <CardDate>12/27/2019 at 03:00 p.m.</CardDate>
-          </Item>
-          <Item>
-            <img
-              className="d-block w-100"
-              src="https://static.eventials.com/media/thumb_cache/f3/91/f3910d56bc0edfd0929023045431cbce.jpg"
-              alt="First slide"
-            />
-            <CardTitle>
-              Como começar 2020 aumentando as vendas de Office e Windows
-            </CardTitle>
-            <CardDate>12/27/2019 at 03:00 p.m.</CardDate>
-          </Item>
-          <Item>
-            <img
-              className="d-block w-100"
-              src="https://static.eventials.com/media/thumb_cache/f3/91/f3910d56bc0edfd0929023045431cbce.jpg"
-              alt="First slide"
-            />
-            <CardTitle>
-              Como começar 2020 aumentando as vendas de Office e Windows
-            </CardTitle>
-            <CardDate>12/27/2019 at 03:00 p.m.</CardDate>
-          </Item>
-          <Item>
-            <img
-              className="d-block w-100"
-              src="https://static.eventials.com/media/thumb_cache/f3/91/f3910d56bc0edfd0929023045431cbce.jpg"
-              alt="First slide"
-            />
-            <CardTitle>
-              Como começar 2020 aumentando as vendas de Office e Windows
-            </CardTitle>
-            <CardDate>12/27/2019 at 03:00 p.m.</CardDate>
-          </Item>
+          {webinars.map(webinar => (
+            <a
+              href={webinar?.url}
+              key={webinar?.id}
+              rel="noreferrer"
+              style={{ textDecoration: 'none', cursor: 'pointer' }}
+            >
+              <Item>
+                <img
+                  className="d-block w-100"
+                  src="https://picsum.photos/200"
+                  alt={webinar?.title}
+                />
+                <CardTitle>{webinar?.title}</CardTitle>
+                <CardDate>
+                  {moment(webinar?.start_time)
+                    .locale('pt-br')
+                    .format('DD/MM/YYYY - hh:mm')}
+                </CardDate>
+              </Item>
+            </a>
+          ))}
         </ItemsCarousel>
       </ContainerCarousel>
     </Container>
