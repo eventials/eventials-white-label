@@ -30,7 +30,9 @@ function Footer() {
       </ContainerTop>
 
       <ContainerBottom>
-        <hr style={{ backgroundColor: '#fff', width: '100%' }} />
+        <hr
+          style={{ backgroundColor: configs?.backgroundColor, width: '100%' }}
+        />
 
         <ContainerText>
           <p>Powered by Eventials Plataforma de Webinars</p>

@@ -1,7 +1,8 @@
 import styled from 'styled-components';
+import { configs } from 'configs/customizations';
 
 export const Container = styled.div`
-  background-color: #f5f5f5;
+  background-color: ${configs.backgroundColor};
 `;
 
 export const ContainerCarousel = styled.div`
@@ -15,7 +16,7 @@ export const ContainerCarousel = styled.div`
 `;
 
 export const Title = styled.h3`
-  color: rgba(0, 0, 0, 0.8);
+  color: ${configs?.titleGrupoWebinar};
   margin: 0px 0px 5px 0px;
   font-family: 'Inter';
   text-align: 'center';
@@ -50,7 +51,7 @@ export const Item = styled.div`
 `;
 
 export const CardTitle = styled.label`
-  color: #343434;
+  color: ${configs?.titleCard};
   font-weight: bold;
   display: block;
   margin-top: 10px;
@@ -71,7 +72,7 @@ export const CardTitle = styled.label`
 `;
 
 export const CardDate = styled.label`
-  color: #535252;
+  color: ${configs?.dateCard};
   font-size: 11px;
   cursor: pointer;
 `;

@@ -37,7 +37,7 @@ export const ContainerTitleContact = styled.div`
   }
 
   > h2 {
-    color: #43464a;
+    color: ${configs?.textContact};
     font-size: 22px;
     font-family: 'Inter';
     width: 90%;
@@ -98,7 +98,7 @@ export const ContainerContact = styled.div`
   border-radius: 5px;
   -ms-flex-align: center;
   align-items: center;
-  background: #152e4d;
+  background: ${configs?.primary};
   border-radius: 5px;
   display: -ms-flexbox;
   display: flex;
@@ -124,16 +124,16 @@ export const StyledForm = styled(Form)`
   > button {
     width: 100%;
     height: 55px;
-    background-color: #ff4d1f;
-    border-color: #ff4d1f;
+    background-color: ${configs?.second};
+    border-color: ${configs?.second};
     color: white;
     text-transform: uppercase;
     font-size: 17px;
     border-radius: 4px;
 
     &:hover {
-      background-color: #ff4d1f;
-      border-color: #ff4d1f;
+      background-color: ${configs?.second};
+      border-color: ${configs?.second};
       opacity: 0.9;
     }
   }

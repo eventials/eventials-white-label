@@ -6,7 +6,7 @@ function BannerCarousel() {
   return (
     <Carousel>
       {configs?.banner.map(b => (
-        <Carousel.Item>
+        <Carousel.Item key={b}>
           <img className="d-block w-100" src={b} alt="Banner" />
         </Carousel.Item>
       ))}

@@ -2,6 +2,7 @@ import * as React from 'react';
 import ItemsCarousel from 'react-items-carousel';
 import moment from 'moment';
 import LiveIcon from 'assets/live.svg';
+import { configs } from 'configs/customizations';
 import {
   CardDate,
   CardTitle,
@@ -135,10 +136,7 @@ console.log(sortedArray) */}
                 <Item>
                   <img
                     className="d-block w-100"
-                    src={
-                      webinar.cover ||
-                      'https://static-stg.eventials.com/static/images/placeholder-talk.png'
-                    }
+                    src={webinar.cover || configs?.defaultImage}
                     alt={webinar?.title}
                   />
 

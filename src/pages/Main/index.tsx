@@ -81,7 +81,7 @@ function Main() {
           <img src={configs?.descriptionImage} alt="Description" />
           <TextDescription>
             <p>
-              Bem-vindo a <b style={{ color: '#ff4d1f' }}>Universidade</b>
+              Bem-vindo a <b style={{ color: configs?.second }}>Universidade</b>
               <span style={{ fontWeight: 700 }}> SND</span>, o canal que
               proporciona conhecimento aos nossos clientes.
             </p>
@@ -102,45 +102,24 @@ function Main() {
 
         {webinars.length > 0 && (
           <>
-            <WebinarCarousel title="Ao Vivo" webinars={liveWebinars} live />
+            {liveWebinars.length > 0 && (
+              <WebinarCarousel title="Ao Vivo" webinars={liveWebinars} live />
+            )}
             <WebinarCarousel title="Cloud" webinars={webinars} />
             <WebinarCarousel title="Cibersegurança" webinars={webinars} />
             <WebinarCarousel title="Networking" webinars={webinars} />
           </>
         )}
-        {/* <WebinarCarousel title="Educação" />
-        <WebinarCarousel title="Institucional SND" />
-        <WebinarCarousel title="Colaboração" />
-        <WebinarCarousel title="Componentes" />
-        <WebinarCarousel title="Computadores e TVs" />
-        <WebinarCarousel title="Games e PC Gamer" />
-        <WebinarCarousel title="Softwares ESD e OEM" /> */}
-        {/* <div className="event-title">
-          <h2>Calendário de Eventos</h2>
-        </div> */}
 
-        {/* <div className="card-event-container">
-          <div className="card-event {% if forloop.counter0 > 2 %}card-event-hidden{% endif %}">
-            <div className="image">
-              <img
-                src="https://static.eventials.com/media/thumb_cache/ca/ll11/ca1172d4e13cfb0b8f5c12b305f2a7db.jpg"
-                alt="event"
-              />
-            </div>
-            <div className="content">
-              <div className="date">event.date</div>
-              <div className="name">event.name</div>
-              <div className="location">event.location</div>
-            </div>
-          </div>
-        </div> */}
         <SeeAll>
           <ButtonSeeAll id="toggleEvents" href={configs?.allWebinars}>
             Ver todos
           </ButtonSeeAll>
         </SeeAll>
 
-        <Contact />
+        {configs?.contact && <Contact />}
+
+        {configs?.contact && <Contact />}
 
         <Footer />
       </StyledContainer>

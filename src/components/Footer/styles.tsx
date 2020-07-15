@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { configs } from 'configs/customizations';
 
 export const StyledContainer = styled.div`
   display: flex;
@@ -8,8 +9,8 @@ export const StyledContainer = styled.div`
   width: 100%;
   height: 280px;
   padding: 50px;
-  background-color: #152e4d;
-  color: #fff;
+  background-color: ${configs?.primary};
+  color: ${configs?.textFooter};
 
   @media (max-width: 900px) {
     height: 350px;
