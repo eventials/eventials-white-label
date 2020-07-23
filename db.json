@@ -1,0 +1,690 @@
+{
+  "webinars": [
+    {
+      "id": 7450,
+      "title": "asdlçfkj",
+      "description": "asdf",
+      "start_time": "2020-02-06T17:31:00Z",
+      "is_public": false,
+      "is_group_only": false,
+      "is_draft": false,
+      "date_added": "2020-02-06T17:31:57.893244Z",
+      "state": "live",
+      "slug": "asdlcfkj",
+      "ticket_price": 0,
+      "embed_enabled": false,
+      "playback_stream_name": "xfp9bcqr9ejpengj",
+      "publish_stream_name": "mf6fsvanhv23u2j4",
+      "live_scheduled": false,
+      "block_shared_subscriptions": true,
+      "subscription_required": false,
+      "access_code": null,
+      "owner": {
+        "id": 46482,
+        "username": "exitus",
+        "first_name": "exitus",
+        "last_name": "",
+        "email": "daniel.lopes@eventials.com"
+      },
+      "timezone": {
+        "id": 69,
+        "country_isocode": "BR",
+        "code": "America/Sao_Paulo",
+        "is_default": true,
+        "name": "",
+        "utc_offset": -10800
+      },
+      "category": {
+        "id": 1,
+        "name": "Arts and Humanities",
+        "slug": "arts-and-humanities"
+      },
+      "url": "https://staging.eventials.com/exitus/asdlcfkj",
+      "cover": "https://api-stg.eventials.com/v1/webinars/7450/cover",
+      "stream": {
+        "key": "mf6fsvanhv23u2j4",
+        "url": "rtmp://stelis.staging.eventials.com/eventialsLive",
+        "token": "-"
+      },
+      "stream_key": "mf6fsvanhv23u2j4",
+      "stream_url": "rtmp://stelis.staging.eventials.com/eventialsLive"
+    },
+    {
+      "id": 7451,
+      "title": "teste",
+      "description": "teste",
+      "start_time": "2020-02-06T18:40:00Z",
+      "is_public": true,
+      "is_group_only": false,
+      "is_draft": false,
+      "date_added": "2020-02-06T18:40:17.548586Z",
+      "state": "live",
+      "slug": "teste",
+      "ticket_price": 0,
+      "embed_enabled": false,
+      "playback_stream_name": "1h1rno65qyz8rjsm",
+      "publish_stream_name": "296bwgurvbr7amy6",
+      "live_scheduled": false,
+      "block_shared_subscriptions": false,
+      "subscription_required": false,
+      "access_code": "",
+      "owner": {
+        "id": 46482,
+        "username": "exitus",
+        "first_name": "exitus",
+        "last_name": "",
+        "email": "daniel.lopes@eventials.com"
+      },
+      "timezone": {
+        "id": 69,
+        "country_isocode": "BR",
+        "code": "America/Sao_Paulo",
+        "is_default": true,
+        "name": "",
+        "utc_offset": -10800
+      },
+      "category": {
+        "id": 28,
+        "name": "Esoterism",
+        "slug": "esoterismo"
+      },
+      "url": "https://staging.eventials.com/exitus/teste",
+      "cover": "https://api-stg.eventials.com/v1/webinars/7451/cover",
+      "stream": {
+        "key": "296bwgurvbr7amy6",
+        "url": "rtmp://stelis.staging.eventials.com/eventialsLive",
+        "token": "-"
+      },
+      "stream_key": "296bwgurvbr7amy6",
+      "stream_url": "rtmp://stelis.staging.eventials.com/eventialsLive"
+    },
+    {
+      "id": 7452,
+      "title": "here now",
+      "description": "here now",
+      "start_time": "2020-02-06T20:25:00Z",
+      "is_public": true,
+      "is_group_only": false,
+      "is_draft": false,
+      "date_added": "2020-02-06T20:25:11.551227Z",
+      "state": "live",
+      "slug": "here-now",
+      "ticket_price": 0,
+      "embed_enabled": false,
+      "playback_stream_name": "qrd6v4pyisd481bp",
+      "publish_stream_name": "ebj5p5pyvko3d4v9",
+      "live_scheduled": false,
+      "block_shared_subscriptions": false,
+      "subscription_required": false,
+      "access_code": null,
+      "owner": {
+        "id": 46482,
+        "username": "exitus",
+        "first_name": "exitus",
+        "last_name": "",
+        "email": "daniel.lopes@eventials.com"
+      },
+      "timezone": {
+        "id": 69,
+        "country_isocode": "BR",
+        "code": "America/Sao_Paulo",
+        "is_default": true,
+        "name": "",
+        "utc_offset": -10800
+      },
+      "category": {
+        "id": 9,
+        "name": "Photo",
+        "slug": "photo"
+      },
+      "url": "https://staging.eventials.com/exitus/here-now",
+      "cover": "https://api-stg.eventials.com/v1/webinars/7452/cover",
+      "stream": {
+        "key": "ebj5p5pyvko3d4v9",
+        "url": "rtmp://stelis.staging.eventials.com/eventialsLive",
+        "token": "-"
+      },
+      "stream_key": "ebj5p5pyvko3d4v9",
+      "stream_url": "rtmp://stelis.staging.eventials.com/eventialsLive"
+    },
+    {
+      "id": 7454,
+      "title": "Teste Enquete",
+      "description": "Teste",
+      "start_time": "2020-02-21T16:00:00Z",
+      "is_public": true,
+      "is_group_only": false,
+      "is_draft": false,
+      "date_added": "2020-02-21T16:01:23.528032Z",
+      "state": "upcoming",
+      "slug": "teste-enquete",
+      "ticket_price": 0,
+      "embed_enabled": false,
+      "playback_stream_name": "h8ai181t6b8yxh2j",
+      "publish_stream_name": "ou8vsqrytw4c212u",
+      "live_scheduled": false,
+      "block_shared_subscriptions": false,
+      "subscription_required": false,
+      "access_code": null,
+      "owner": {
+        "id": 46482,
+        "username": "exitus",
+        "first_name": "exitus",
+        "last_name": "",
+        "email": "daniel.lopes@eventials.com"
+      },
+      "timezone": {
+        "id": 69,
+        "country_isocode": "BR",
+        "code": "America/Sao_Paulo",
+        "is_default": true,
+        "name": "",
+        "utc_offset": -10800
+      },
+      "category": {
+        "id": 20,
+        "name": "Technology",
+        "slug": "technology"
+      },
+      "url": "https://staging.eventials.com/exitus/teste-enquete",
+      "cover": "https://api-stg.eventials.com/v1/webinars/7454/cover",
+      "stream": {
+        "key": "ou8vsqrytw4c212u",
+        "url": "rtmp://stelis.staging.eventials.com/eventialsLive",
+        "token": "-"
+      },
+      "stream_key": "ou8vsqrytw4c212u",
+      "stream_url": "rtmp://stelis.staging.eventials.com/eventialsLive"
+    },
+    {
+      "id": 7455,
+      "title": "Novo Webinar",
+      "description": "Tstes",
+      "start_time": "2020-02-26T17:16:00Z",
+      "is_public": true,
+      "is_group_only": false,
+      "is_draft": false,
+      "date_added": "2020-02-26T17:16:16.163901Z",
+      "state": "upcoming",
+      "slug": "novo-webinar",
+      "ticket_price": 0,
+      "embed_enabled": false,
+      "playback_stream_name": "cd5j9yt9or42v6yw",
+      "publish_stream_name": "fgpyu6it43yf3s1m",
+      "live_scheduled": false,
+      "block_shared_subscriptions": false,
+      "subscription_required": false,
+      "access_code": null,
+      "owner": {
+        "id": 46482,
+        "username": "exitus",
+        "first_name": "exitus",
+        "last_name": "",
+        "email": "daniel.lopes@eventials.com"
+      },
+      "timezone": {
+        "id": 69,
+        "country_isocode": "BR",
+        "code": "America/Sao_Paulo",
+        "is_default": true,
+        "name": "",
+        "utc_offset": -10800
+      },
+      "category": {
+        "id": 20,
+        "name": "Technology",
+        "slug": "technology"
+      },
+      "url": "https://staging.eventials.com/exitus/novo-webinar",
+      "cover": "https://api-stg.eventials.com/v1/webinars/7455/cover",
+      "stream": {
+        "key": "fgpyu6it43yf3s1m",
+        "url": "rtmp://stelis.staging.eventials.com/eventialsLive",
+        "token": "-"
+      },
+      "stream_key": "fgpyu6it43yf3s1m",
+      "stream_url": "rtmp://stelis.staging.eventials.com/eventialsLive"
+    },
+    {
+      "id": 7458,
+      "title": "asdfasdfcase",
+      "description": "ceqwer",
+      "start_time": "2020-03-04T20:15:00Z",
+      "is_public": true,
+      "is_group_only": false,
+      "is_draft": false,
+      "date_added": "2020-03-04T20:15:14.452275Z",
+      "state": "upcoming",
+      "slug": "asdfasdfcase",
+      "ticket_price": 0,
+      "embed_enabled": false,
+      "playback_stream_name": "gapcc6msxyoyrtkj",
+      "publish_stream_name": "5ttvjwdoztidvghg",
+      "live_scheduled": false,
+      "block_shared_subscriptions": false,
+      "subscription_required": false,
+      "access_code": null,
+      "owner": {
+        "id": 46482,
+        "username": "exitus",
+        "first_name": "exitus",
+        "last_name": "",
+        "email": "daniel.lopes@eventials.com"
+      },
+      "timezone": {
+        "id": 69,
+        "country_isocode": "BR",
+        "code": "America/Sao_Paulo",
+        "is_default": true,
+        "name": "",
+        "utc_offset": -10800
+      },
+      "category": {
+        "id": 4,
+        "name": "Design",
+        "slug": "design"
+      },
+      "url": "https://staging.eventials.com/exitus/asdfasdfcase",
+      "cover": "https://api-stg.eventials.com/v1/webinars/7458/cover",
+      "stream": {
+        "key": "5ttvjwdoztidvghg",
+        "url": "rtmp://stelis.staging.eventials.com/eventialsLive",
+        "token": "-"
+      },
+      "stream_key": "5ttvjwdoztidvghg",
+      "stream_url": "rtmp://stelis.staging.eventials.com/eventialsLive"
+    },
+    {
+      "id": 7460,
+      "title": "Meu Webinar Eventials",
+      "description": "Meu Webinar Eventials.",
+      "start_time": "2020-03-11T14:01:00Z",
+      "is_public": true,
+      "is_group_only": false,
+      "is_draft": false,
+      "date_added": "2020-03-11T14:05:59.196817Z",
+      "state": "upcoming",
+      "slug": "meu-webinar-eventials",
+      "ticket_price": 0,
+      "embed_enabled": false,
+      "playback_stream_name": "tsdvm9afxfa78nhq",
+      "publish_stream_name": "63oz7zygkbw9xn4y",
+      "live_scheduled": false,
+      "block_shared_subscriptions": false,
+      "subscription_required": false,
+      "access_code": "",
+      "owner": {
+        "id": 46482,
+        "username": "exitus",
+        "first_name": "exitus",
+        "last_name": "",
+        "email": "daniel.lopes@eventials.com"
+      },
+      "timezone": {
+        "id": 69,
+        "country_isocode": "BR",
+        "code": "America/Sao_Paulo",
+        "is_default": true,
+        "name": "",
+        "utc_offset": -10800
+      },
+      "category": {
+        "id": 1,
+        "name": "Arts and Humanities",
+        "slug": "arts-and-humanities"
+      },
+      "url": "https://staging.eventials.com/exitus/meu-webinar-eventials",
+      "cover": "https://api-stg.eventials.com/v1/webinars/7460/cover",
+      "stream": {
+        "key": "63oz7zygkbw9xn4y",
+        "url": "rtmp://stelis.staging.eventials.com/eventialsLive",
+        "token": "-"
+      },
+      "stream_key": "63oz7zygkbw9xn4y",
+      "stream_url": "rtmp://stelis.staging.eventials.com/eventialsLive"
+    },
+    {
+      "id": 7461,
+      "title": "privado",
+      "description": "teste",
+      "start_time": "2020-03-12T15:47:00Z",
+      "is_public": false,
+      "is_group_only": false,
+      "is_draft": false,
+      "date_added": "2020-03-12T15:48:00.142934Z",
+      "state": "upcoming",
+      "slug": "privado",
+      "ticket_price": 0,
+      "embed_enabled": false,
+      "playback_stream_name": "ya4idayfpch687yr",
+      "publish_stream_name": "hbvuy5iem4q6hsp4",
+      "live_scheduled": false,
+      "block_shared_subscriptions": true,
+      "subscription_required": false,
+      "access_code": null,
+      "owner": {
+        "id": 46482,
+        "username": "exitus",
+        "first_name": "exitus",
+        "last_name": "",
+        "email": "daniel.lopes@eventials.com"
+      },
+      "timezone": {
+        "id": 69,
+        "country_isocode": "BR",
+        "code": "America/Sao_Paulo",
+        "is_default": true,
+        "name": "",
+        "utc_offset": -10800
+      },
+      "category": {
+        "id": 29,
+        "name": "Gastronomy",
+        "slug": "gastronomia"
+      },
+      "url": "https://staging.eventials.com/exitus/privado",
+      "cover": "https://api-stg.eventials.com/v1/webinars/7461/cover",
+      "stream": {
+        "key": "hbvuy5iem4q6hsp4",
+        "url": "rtmp://stelis.staging.eventials.com/eventialsLive",
+        "token": "-"
+      },
+      "stream_key": "hbvuy5iem4q6hsp4",
+      "stream_url": "rtmp://stelis.staging.eventials.com/eventialsLive"
+    },
+    {
+      "id": 7462,
+      "title": "Testando Focus",
+      "description": "Tese",
+      "start_time": "2020-03-31T12:47:00Z",
+      "is_public": false,
+      "is_group_only": false,
+      "is_draft": false,
+      "date_added": "2020-03-31T12:48:13.109506Z",
+      "state": "upcoming",
+      "slug": "testando-focus",
+      "ticket_price": 0,
+      "embed_enabled": false,
+      "playback_stream_name": "pp7t8zjm5x8ufrx9",
+      "publish_stream_name": "u8uozn5p5r4stwa1",
+      "live_scheduled": false,
+      "block_shared_subscriptions": false,
+      "subscription_required": false,
+      "access_code": "",
+      "owner": {
+        "id": 46482,
+        "username": "exitus",
+        "first_name": "exitus",
+        "last_name": "",
+        "email": "daniel.lopes@eventials.com"
+      },
+      "timezone": {
+        "id": 69,
+        "country_isocode": "BR",
+        "code": "America/Sao_Paulo",
+        "is_default": true,
+        "name": "",
+        "utc_offset": -10800
+      },
+      "category": {
+        "id": 29,
+        "name": "Gastronomy",
+        "slug": "gastronomia"
+      },
+      "url": "https://staging.eventials.com/exitus/testando-focus",
+      "cover": "https://api-stg.eventials.com/v1/webinars/7462/cover",
+      "stream": {
+        "key": "u8uozn5p5r4stwa1",
+        "url": "rtmp://stelis.staging.eventials.com/eventialsLive",
+        "token": "-"
+      },
+      "stream_key": "u8uozn5p5r4stwa1",
+      "stream_url": "rtmp://stelis.staging.eventials.com/eventialsLive"
+    },
+    {
+      "id": 7467,
+      "title": "Testando WEBRTC",
+      "description": "Testando WEBRTC",
+      "start_time": "2020-04-15T16:35:00Z",
+      "is_public": true,
+      "is_group_only": false,
+      "is_draft": false,
+      "date_added": "2020-04-15T16:35:55.055371Z",
+      "state": "upcoming",
+      "slug": "testando-webrtc",
+      "ticket_price": 0,
+      "embed_enabled": false,
+      "playback_stream_name": "1rzubikcd8k8s8ft",
+      "publish_stream_name": "nv1b8chb7ex7ruqa",
+      "live_scheduled": false,
+      "block_shared_subscriptions": false,
+      "subscription_required": false,
+      "access_code": null,
+      "owner": {
+        "id": 46482,
+        "username": "exitus",
+        "first_name": "exitus",
+        "last_name": "",
+        "email": "daniel.lopes@eventials.com"
+      },
+      "timezone": {
+        "id": 69,
+        "country_isocode": "BR",
+        "code": "America/Sao_Paulo",
+        "is_default": true,
+        "name": "",
+        "utc_offset": -10800
+      },
+      "category": {
+        "id": 3,
+        "name": "How To & DIY",
+        "slug": "how-to-diy"
+      },
+      "url": "https://staging.eventials.com/exitus/testando-webrtc",
+      "cover": "https://api-stg.eventials.com/v1/webinars/7467/cover",
+      "stream": {
+        "key": "nv1b8chb7ex7ruqa",
+        "url": "rtmp://stelis.staging.eventials.com/eventialsLive",
+        "token": "-"
+      },
+      "stream_key": "nv1b8chb7ex7ruqa",
+      "stream_url": "rtmp://stelis.staging.eventials.com/eventialsLive"
+    },
+    {
+      "id": 7490,
+      "title": "TESTANDO",
+      "description": "TESTE",
+      "start_time": "2020-05-28T18:36:00Z",
+      "is_public": true,
+      "is_group_only": false,
+      "is_draft": false,
+      "date_added": "2020-05-28T18:37:15.69597Z",
+      "state": "upcoming",
+      "slug": "testando",
+      "ticket_price": 0,
+      "embed_enabled": false,
+      "playback_stream_name": "147z8ivnf4eawz69",
+      "publish_stream_name": "f7kngt9kugx7fnvu",
+      "live_scheduled": false,
+      "block_shared_subscriptions": false,
+      "subscription_required": false,
+      "access_code": null,
+      "owner": {
+        "id": 46482,
+        "username": "exitus",
+        "first_name": "exitus",
+        "last_name": "",
+        "email": "daniel.lopes@eventials.com"
+      },
+      "timezone": {
+        "id": 69,
+        "country_isocode": "BR",
+        "code": "America/Sao_Paulo",
+        "is_default": true,
+        "name": "",
+        "utc_offset": -10800
+      },
+      "category": {
+        "id": 29,
+        "name": "Gastronomy",
+        "slug": "gastronomia"
+      },
+      "url": "https://staging.eventials.com/exitus/testando",
+      "cover": "https://api-stg.eventials.com/v1/webinars/7490/cover",
+      "stream": {
+        "key": "f7kngt9kugx7fnvu",
+        "url": "rtmp://stelis.staging.eventials.com/eventialsLive",
+        "token": "-"
+      },
+      "stream_key": "f7kngt9kugx7fnvu",
+      "stream_url": "rtmp://stelis.staging.eventials.com/eventialsLive"
+    },
+    {
+      "id": 7491,
+      "title": "TESTANDO AGORA",
+      "description": "TESTANDO AGORA",
+      "start_time": "2020-05-28T18:39:00Z",
+      "is_public": true,
+      "is_group_only": false,
+      "is_draft": false,
+      "date_added": "2020-05-28T18:39:27.478246Z",
+      "state": "live",
+      "slug": "testando-agora",
+      "ticket_price": 0,
+      "embed_enabled": false,
+      "playback_stream_name": "4megq1adtkh6udie",
+      "publish_stream_name": "br1cdcsrgxjcaniz",
+      "live_scheduled": false,
+      "block_shared_subscriptions": false,
+      "subscription_required": false,
+      "access_code": null,
+      "owner": {
+        "id": 46482,
+        "username": "exitus",
+        "first_name": "exitus",
+        "last_name": "",
+        "email": "daniel.lopes@eventials.com"
+      },
+      "timezone": {
+        "id": 69,
+        "country_isocode": "BR",
+        "code": "America/Sao_Paulo",
+        "is_default": true,
+        "name": "",
+        "utc_offset": -10800
+      },
+      "category": {
+        "id": 20,
+        "name": "Technology",
+        "slug": "technology"
+      },
+      "url": "https://staging.eventials.com/exitus/testando-agora",
+      "cover": "https://api-stg.eventials.com/v1/webinars/7491/cover",
+      "stream": {
+        "key": "br1cdcsrgxjcaniz",
+        "url": "rtmp://stelis.staging.eventials.com/eventialsLive",
+        "token": "-"
+      },
+      "stream_key": "br1cdcsrgxjcaniz",
+      "stream_url": "rtmp://stelis.staging.eventials.com/eventialsLive"
+    },
+    {
+      "id": 7497,
+      "title": "teste",
+      "description": "teste",
+      "start_time": "2020-06-30T18:21:00Z",
+      "is_public": true,
+      "is_group_only": false,
+      "is_draft": false,
+      "date_added": "2020-06-30T18:21:45.650643Z",
+      "state": "upcomming",
+      "slug": "teste-2",
+      "ticket_price": 0,
+      "embed_enabled": false,
+      "playback_stream_name": "rienihk8eegdhzq2",
+      "publish_stream_name": "hrmbgf9tc3ksvboo",
+      "live_scheduled": false,
+      "block_shared_subscriptions": false,
+      "subscription_required": false,
+      "access_code": null,
+      "owner": {
+        "id": 46482,
+        "username": "exitus",
+        "first_name": "exitus",
+        "last_name": "",
+        "email": "daniel.lopes@eventials.com"
+      },
+      "timezone": {
+        "id": 69,
+        "country_isocode": "BR",
+        "code": "America/Sao_Paulo",
+        "is_default": true,
+        "name": "",
+        "utc_offset": -10800
+      },
+      "category": {
+        "id": 20,
+        "name": "Technology",
+        "slug": "technology"
+      },
+      "url": "https://staging.eventials.com/exitus/teste-2",
+      "cover": "https://api-stg.eventials.com/v1/webinars/7497/cover",
+      "stream": {
+        "key": "hrmbgf9tc3ksvboo",
+        "url": "rtmp://stelis.staging.eventials.com/eventialsLive",
+        "token": "-"
+      },
+      "stream_key": "hrmbgf9tc3ksvboo",
+      "stream_url": "rtmp://stelis.staging.eventials.com/eventialsLive"
+    },
+    {
+      "id": 7502,
+      "title": "MEU WEBINAR FUTURO",
+      "description": "MEU WEBINAR FUTURO",
+      "start_time": "2020-07-15T18:01:00Z",
+      "is_public": true,
+      "is_group_only": false,
+      "is_draft": false,
+      "date_added": "2020-07-15T18:02:13.134531Z",
+      "state": "upcoming",
+      "slug": "meu-webinar-futuro",
+      "ticket_price": 0,
+      "embed_enabled": false,
+      "playback_stream_name": "5yfzng2uug7bjgmc",
+      "publish_stream_name": "gwjkku5yb2spumot",
+      "live_scheduled": false,
+      "block_shared_subscriptions": false,
+      "subscription_required": false,
+      "access_code": null,
+      "owner": {
+        "id": 46482,
+        "username": "exitus",
+        "first_name": "exitus",
+        "last_name": "",
+        "email": "daniel.lopes@eventials.com"
+      },
+      "timezone": {
+        "id": 69,
+        "country_isocode": "BR",
+        "code": "America/Sao_Paulo",
+        "is_default": true,
+        "name": "",
+        "utc_offset": -10800
+      },
+      "category": {
+        "id": 20,
+        "name": "Technology",
+        "slug": "technology"
+      },
+      "url": "https://staging.eventials.com/exitus/meu-webinar-futuro",
+      "cover": "https://api-stg.eventials.com/v1/webinars/7502/cover",
+      "stream": {
+        "key": "gwjkku5yb2spumot",
+        "url": "rtmp://stelis.staging.eventials.com/eventialsLive",
+        "token": "-"
+      },
+      "stream_key": "gwjkku5yb2spumot",
+      "stream_url": "rtmp://stelis.staging.eventials.com/eventialsLive"
+    }
+  ]
+}

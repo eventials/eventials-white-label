@@ -1,45 +1,145 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<p align="center">
+  <a href="https://eventials.com">
+    <img alt="Eventials" src="https://s3.amazonaws.com/dev-assets.eventials.com/whitelabel-dev/logo.jpg" width="60" />
+  </a>
+</p>
+<h1 align="center">
+  Eventials Whitelabel
+</h1>
+<h3 align="center">
+  We using React JS ⚛️ 
+</h3>
+<h3 align="center">
+  Fast is better
+</h3>
+<p align="center">
+  Eventials Whiteabel is a open souce project, so you can edit with yours customizations (Users Eventials).
+</p>
 
-## Available Scripts
 
-In the project directory, you can run:
+## 🚀 Get Up and Running in 10 Minutes
 
-### `yarn start`
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+You can running a new Eventials Whitelabel in your local dev environment in 5 minutes with these four steps:
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
 
-### `yarn test`
+1. Make a clone of project
+   
+2. Install dependencies
+ ```shell
+   yarn
+   ```
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+3. Get your credentials in [https://www.eventials.com/oauth-clients/](https://www.eventials.com/oauth-clients/ "https://www.eventials.com/oauth-clients/")
+a) Create a credentials
+[![step1](https://s3.amazonaws.com/dev-assets.eventials.com/whitelabel-dev/1+-+create-credentials.jpg "step1")](https://s3.amazonaws.com/dev-assets.eventials.com/whitelabel-dev/1+-+create-credentials.jpg "step1")
 
-### `yarn build`
+ b) Add a project name
+[![Add a project name](https://s3.amazonaws.com/dev-assets.eventials.com/whitelabel-dev/2+-+added-project-name.jpg "Add a project name")](http://https://s3.amazonaws.com/dev-assets.eventials.com/whitelabel-dev/2+-+added-project-name.jpg "Add a project name")
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+ c) Copy your credentials
+ [![Copy your credentials](https://s3.amazonaws.com/dev-assets.eventials.com/whitelabel-dev/3+-+copy-credentials.jpg "Copy your credentials")](https://s3.amazonaws.com/dev-assets.eventials.com/whitelabel-dev/3+-+copy-credentials.jpg "Copy your credentials")
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+4. We recommend that you read a documentation of our API, you can see in this link ==> [https://eventialsapi.docs.apiary.io/#](https://eventialsapi.docs.apiary.io/# "https://eventialsapi.docs.apiary.io/#")
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+5. Now you can create a file .**env** in root project  and added this informations:
+ ```shell
+   REACT_APP_API_URL=
+   REACT_APP_CLIENT_ID=
+   REACT_APP_CLIENT_SECRET=
+   ```
+6. To running the project
 
-### `yarn eject`
+ ```shell
+   yarn dev
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+   ```
+   Done, your project is running.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+## :tw-1f3a8:  Customizations
 
-## Learn More
+In project we have a file: **/src/configs/customizations.ts**
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+```javascript
+export const configs = {
+  // organization data
+  name: 'ORGANIZATION_NAME',
+  adress: 'ORGANIZATION_ADDRESS',
+  phone: 'Tel.: (000) 0000-0000',
+  site: 'https://www.example.com',
 
-To learn React, check out the [React documentation](https://reactjs.org/).
-# eventials-white-label
+  // images
+  logo: 'URL_LOGO_ORGANIZATION',
+  descriptionImage:  'IMAGE_TO_DESCRIPTION',
+  banner: [
+    'URL_BANNER_1',
+    'URL_BANNER_2',
+	'URL_BANNER_3',
+	'...'
+  ],
+  bannerContact: 'URL_BANNER_CONTACT',
+
+  imageTitleContact: 'URL_IMAGE_TITLE_CONTACT',
+
+  defaultImage: 'URL_DEFAULT_IMAGE_TO_WEBINARS',
+
+  // social media
+  youtube: 'https://www.youtube.com/channel/YOUR-CHANNEL',
+  linkedIn: 'https://www.linkedin.com/company/YOUR-COMPANY/',
+  facebook: 'https://www.facebook.com/YOUR-PROFILE/',
+  instagram: 'https://www.instagram.com/YOUR-PROFILE/',
+  allWebinars: 'https://www.eventials.com/YOUR-PROFILE/talks/',
+
+  // feature flags
+  contact: false,
+  typeformContact: false,
+
+  // colors customization
+  primary: '#152e4d',
+  second: '#ff4d1f',
+  backgroundColor: '#f5f5f5',
+  backgroundColorWhite: '#fff',
+  textContact: '#43464a',
+  textFooter: '#fff',
+  titleGrupoWebinar: 'rgba(0, 0, 0, 0.8)',
+  titleCard: '#343434',
+  dateCard: '#535252',
+};
+
+```
+##  :tw-1f3b2: Playground
+
+We have a playground (with a data mock), to you use, make this:
+
+1. Execute a json-server (dependencie) to use a mock data 
+	```shell
+		yarn json-server --watch db.json --port 3004
+	```
+2. Change of file **.env**
+	```shell
+		REACT_APP_API_URL=http://localhost:3004
+	```
+3. Now you can execute the react project in another terminal (don't execute this step before of step 2)
+	```shell
+		yarn dev
+	```
+4. Done, your project is running of a mock data.
+	
+## 🤝 How to Contribute
+
+Anyone can contribuite in this project, you need:
+
+1. Make a fork of project
+2. Do your changes
+3. Open a pull request and waiting
+
+
+## :memo: License
+
+Licensed under the [MIT License](./LICENSE).
+
+## :tw-1f497: Thanks
+
+Thanks to our many contributors ! :tw-1f603:
