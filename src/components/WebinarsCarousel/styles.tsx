@@ -33,15 +33,28 @@ export const Item = styled.div`
   align-items: flex-start;
   justify-content: center;
 
+
+  >img {
+    height: 130px
+  }
+
   @media (max-width: 1200px) {
     height: 200px;
     width: 150px;
     margin: 0px 10px 0px 10px;
+
+    >img {
+      height: 110px
+    }
   }
 
   @media (max-width: 900px) {
     height: 200px;
     width: 150px;
+
+    >img {
+      height: 100px
+    }
   }
 
   @media (max-width: 750px) {
