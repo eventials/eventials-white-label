@@ -109,7 +109,7 @@ export const configs = {
 };
 
 ```
-##  :tw-1f3b2: Playground
+##  :beach_umbrella: Playground
 
 We have a playground (with a data mock), to you use, make this:
 
@@ -140,6 +140,6 @@ Anyone can contribuite in this project, you need:
 
 Licensed under the [MIT License](./LICENSE).
 
-## :tw-1f497: Thanks
+## :heart:Thanks
 
-Thanks to our many contributors ! :tw-1f603:
+Thanks to our many contributors ! :smiley:
