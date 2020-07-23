@@ -20,18 +20,15 @@ function Main() {
 
   React.useEffect(() => {
     async function fetchData() {
-      // await generateToken(
-      //   'd5b204bed8024dde9c86836319f3849b',
-      //   'b4f6568ca2534c23acdf728e0e717a71',
-      // );
-      // await getCurrentUser();
-      // await listCategories();
       const response = await listAllWebinars();
 
-      if (response?.status !== 200) {
-        console.log(`Falha na api, erro  ${response.status}`);
-        return;
+      if (response) {
+        if (response?.status !== 200) {
+          console.log(`Falha na api, erro  ${response.status}`);
+          return;
+        }
       }
+
       const { data } = response;
 
       const live = await data.filter(web => web?.state === 'live');
@@ -45,7 +42,6 @@ function Main() {
 
   const handleLayoutChange = () => {
     const currentWidth = window.innerWidth;
-    console.log(currentWidth);
   };
 
   React.useEffect(() => {
