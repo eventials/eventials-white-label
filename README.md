@@ -31,7 +31,8 @@ You can running a new Eventials Whitelabel in your local dev environment in 5 mi
    ```
 
 3. Get your credentials in [https://www.eventials.com/oauth-clients/](https://www.eventials.com/oauth-clients/ "https://www.eventials.com/oauth-clients/")
-a) Create a credentials
+
+ a) Create a credentials
 [![step1](https://s3.amazonaws.com/dev-assets.eventials.com/whitelabel-dev/1+-+create-credentials.jpg "step1")](https://s3.amazonaws.com/dev-assets.eventials.com/whitelabel-dev/1+-+create-credentials.jpg "step1")
 
  b) Add a project name
