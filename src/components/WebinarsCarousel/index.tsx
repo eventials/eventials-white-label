@@ -117,13 +117,6 @@ function WebinarsCarousel({ title, webinars, live }: WebinarsCarouselProps) {
             </svg>
           }
         >
-          {/* 
-const Moment = require('moment')
-const array = [{date:"2018-05-11"},{date:"2018-05-12"},{date:"2018-05-10"}]
-const sortedArray  = array.sort((a,b) => new Moment(a.date).format('YYYYMMDD') - new Moment(b.date).format('YYYYMMDD'))
-console.log(sortedArray) */}
-          {/* infosRows.filter(applyFilters).sort((a, b) => new Date(a.date) - new Date(b.date)).map((scheduling, index) => ( */}
-
           {webinars
             .reverse((a: any, b: any) => a.start_time + b.start_time)
             .map(webinar => (
