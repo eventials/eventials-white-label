@@ -4,7 +4,7 @@ import Footer from 'components/Footer';
 import WebinarCarousel from 'components/WebinarsCarousel';
 import { configs } from 'configs/customizations';
 import * as React from 'react';
-import { listAllWebinars } from 'services/requests';
+import { listAllWebinars, generateToken, refreshToken } from 'services/requests';
 import {
   ButtonSeeAll,
   Description,
@@ -13,6 +13,7 @@ import {
   TextDescription,
   Toolbar,
 } from './styles';
+import { getToken, getRefreshToken } from 'services/organization';
 
 function Main() {
   const [webinars, setWebinars] = React.useState([]);
@@ -20,21 +21,38 @@ function Main() {
 
   React.useEffect(() => {
     async function fetchData() {
-      const response = await listAllWebinars();
+
+      let token: any = '';
+
+      if (getToken()) {
+        token = getToken()
+      } else {
+        token = await generateToken()
+      }
+
+      let response = await listAllWebinars(token);
 
       if (response) {
-        if (response?.status !== 200) {
+        if (response?.status === 401) {
+          if (getRefreshToken()) {
+            token = await refreshToken(getRefreshToken())
+            response = await listAllWebinars(token)
+          } else {
+            token = await generateToken();
+          }
+        }
+        if (response?.status > 200 && response?.status !== 401) {
           console.log(`Falha na api, erro  ${response.status}`);
           return;
         }
+
+        const { data } = response;
+        const live = await data.filter(web => web?.state === 'live');
+
+        setLiveWebinars(live);
+        setWebinars(data);
       }
 
-      const { data } = response;
-
-      const live = await data.filter(web => web?.state === 'live');
-
-      setLiveWebinars(live);
-      setWebinars(data);
     }
 
     fetchData();
@@ -42,6 +60,7 @@ function Main() {
 
   const handleLayoutChange = () => {
     const currentWidth = window.innerWidth;
+    console.log(currentWidth)
   };
 
   React.useEffect(() => {
