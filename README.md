@@ -58,7 +58,7 @@ a) Create a credentials
 
 
 
-## :tw-1f3a8:  Customizations
+## :art: Customizations
 
 In project we have a file: **/src/configs/customizations.ts**
 
