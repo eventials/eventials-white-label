@@ -22,7 +22,7 @@ export const generateToken = async (
 ) => {
   const payload = `grant_type=client_credentials&client_id=${clientCredential}&client_secret=${clientSecret}`;
 
-  const url = `oauth/token?${payload}`;
+  const url = `/oauth/token?${payload}`;
 
   const response = await api.post(url);
 
@@ -36,7 +36,7 @@ export const generateToken = async (
 };
 
 export const listAllWebinars = async () => {
-  const url = `webinars`;
+  const url = `/webinars`;
 
   try {
     const response = await api.get(`${url}`, requestWithJwt());
@@ -47,7 +47,7 @@ export const listAllWebinars = async () => {
   }
 };
 export const getCurrentUser = async () => {
-  const url = `me`;
+  const url = `/me`;
 
   try {
     const response = await api.get(`${url}`, requestWithJwt());
@@ -60,7 +60,7 @@ export const getCurrentUser = async () => {
 };
 
 export const listCategories = async () => {
-  const url = `categories`;
+  const url = `/categories`;
 
   try {
     const response = await api.get(`${url}`);
