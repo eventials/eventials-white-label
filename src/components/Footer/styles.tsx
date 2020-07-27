@@ -9,7 +9,7 @@ export const StyledContainer = styled.div`
   width: 100%;
   height: 280px;
   padding: 50px;
-  background-color: ${configs?.primary};
+  background-color: ${configs?.footer};
   color: ${configs?.textFooter};
 
   @media (max-width: 900px) {
@@ -22,10 +22,11 @@ export const ContainerTop = styled.div`
   flex-direction: row;
   justify-content: space-around;
   width: 70%;
-
-  > a {
-    > img {
-      width: 100px;
+  > div {
+    > a {
+      > img {
+        height: 40px;
+      }
     }
   }
 
@@ -41,11 +42,13 @@ export const ContainerTop = styled.div`
     align-items: center;
     width: 80%;
 
-    > a {
-      > img {
-        margin-top: 20px;
-        width: 80px;
-      }
+    >div {
+        > a {
+          > img {
+            margin-top: 20px;
+            height: 30px;
+          }
+        }
     }
 
     > div {
@@ -61,11 +64,13 @@ export const ContainerTop = styled.div`
     align-items: center;
     justify-content: center;
 
-    > a {
-      margin-top: 30px;
-      > img {
-        max-width: 60px;
-      }
+    >div {
+        > a {
+          margin-top: 30px;
+          > img {
+            height: 40px;
+          }
+        }
     }
 
     > div {

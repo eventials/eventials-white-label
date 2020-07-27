@@ -6,12 +6,12 @@ export const configs = {
   site: 'https://www.snd.com.br/',
 
   // images
-  logo: 'https://s3.amazonaws.com/dev-assets.eventials.com/logo.png',
+  logo: 'https://s3.amazonaws.com/static.eventials.com/whitelabel-opensource/eventials-white.png',
   descriptionImage:
-    'https://s3.amazonaws.com/static.eventials.com/whitelabel-snd/banner_texto_vazio_cortado.png',
+    'https://s3.amazonaws.com/static.eventials.com/whitelabel-opensource/description.png',
   banner: [
-    'https://s3.amazonaws.com/static.eventials.com/whitelabel-snd/Banner2.jpg',
-    'https://s3.amazonaws.com/static.eventials.com/whitelabel-snd/Banner1.jpg',
+    'https://s3.amazonaws.com/static.eventials.com/whitelabel-opensource/banner01.png',
+    'https://s3.amazonaws.com/static.eventials.com/whitelabel-opensource/banner_eventials.png',
   ],
   bannerContact:
     'https://s3.amazonaws.com/static.eventials.com/whitelabel-snd/background_formulario.png',
@@ -34,8 +34,10 @@ export const configs = {
   typeformContact: false,
 
   // colors customization
-  primary: '#152e4d',
-  second: '#ff4d1f',
+  primary: '#EE344E',
+  textDescription: '#EE344E',
+  footer: '#2E3540',
+  second: '#FFFFFF',
   backgroundColor: '#f5f5f5',
   backgroundColorWhite: '#fff',
   textContact: '#43464a',

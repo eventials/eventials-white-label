@@ -92,7 +92,7 @@ export const Toolbar = styled.div`
     justify-content: center;
 
     > img {
-      height: 70%;
+      height: 35px;
     }
   }
 
@@ -107,7 +107,7 @@ export const Toolbar = styled.div`
       justify-content: center;
 
       > img {
-        height: 50%;
+        height: 25px;
       }
     }
   }
