@@ -14,7 +14,6 @@
     "@types/styled-components": "^5.1.1",
     "axios": "^0.19.2",
     "bootstrap": "^4.5.0",
-    "json-server": "^0.16.1",
     "moment": "^2.27.0",
     "react": "^16.13.1",
     "react-bootstrap": "^1.1.1",
@@ -27,7 +26,7 @@
     "typescript": "~3.7.2"
   },
   "scripts": {
-    "dev": "react-scripts start",
+    "dev": "HTTPS=true react-scripts start",
     "build": "react-scripts build",
     "build-deploy": "yarn build && aws s3 sync build s3://demo-whitelabel.eventials.com/",
     "deploy": "aws s3 sync build s3://demo-whitelabel.eventials.com/",
@@ -61,6 +60,7 @@
     "eslint-plugin-prettier": "^3.1.4",
     "eslint-plugin-react": "^7.19.0",
     "eslint-plugin-react-hooks": "^2.5.0",
+    "json-server": "^0.16.1",
     "prettier": "^2.0.5"
   }
 }
