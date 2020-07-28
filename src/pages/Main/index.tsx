@@ -16,36 +16,31 @@ import {
 import { getToken, getRefreshToken } from 'services/organization';
 
 function Main() {
+  const [render, setRender] = React.useState(false)
   const [webinars, setWebinars] = React.useState([]);
   const [liveWebinars, setLiveWebinars] = React.useState([]);
 
   React.useEffect(() => {
     async function fetchData() {
 
-      let token: any = '';
+      let token: any = getToken();
 
-      if (getToken()) {
-        token = getToken()
-      } else {
-        token = await generateToken()
+      if (!token) {
+        const { access_token }: any = await generateToken()
+        token = access_token;
       }
 
       let response = await listAllWebinars(token);
 
-      if (response) {
-        if (response?.status === 401) {
-          if (getRefreshToken()) {
-            token = await refreshToken(getRefreshToken())
-            response = await listAllWebinars(token)
-          } else {
-            token = await generateToken();
-          }
+      if (response?.status === 401) {
+        if (getRefreshToken()) {
+          token = await refreshToken(getRefreshToken())
+          response = await listAllWebinars(token)
+          setRender(!render)
+        } else {
+          token = await generateToken();
         }
-        if (response?.status > 200 && response?.status !== 401) {
-          console.log(`Falha na api, erro  ${response.status}`);
-          return;
-        }
-
+      } else {
         const { data } = response;
         const live = await data.filter(web => web?.state === 'live');
 
@@ -53,10 +48,17 @@ function Main() {
         setWebinars(data);
       }
 
+      if (response?.status > 200 && response?.status !== 401) {
+        console.log(`Falha na api, erro  ${response.status}`);
+        return;
+      }
+
+
+
     }
 
     fetchData();
-  }, []);
+  }, [render]);
 
   const handleLayoutChange = () => {
     const currentWidth = window.innerWidth;
@@ -93,21 +95,12 @@ function Main() {
           <img src={configs?.descriptionImage} alt="Description" />
           <TextDescription>
             <p>
-              Bem-vindo a <b style={{ color: configs?.second }}>Universidade</b>
-              <span style={{ fontWeight: 700 }}> SND</span>, o canal que
-              proporciona conhecimento aos nossos clientes.
+              Bem-vindo a <b style={{ color: configs?.textDescription }}>Eventials</b>!
             </p>
             <p>
-              Compartilhamos expertise e apoiamos o seu desenvolvimento. Aqui
-              você confere conteúdos recentes sobre os principais fabricantes de
-              tecnologia, de qualquer dispositivo e em qualquer lugar.
-            </p>
-            <p>
-              Uma grande parte dos nossos vídeos são interativos, mas é você
-              quem faz a sua rotina e quem dita o calendário.
-            </p>
-            <p>
-              <span style={{ fontWeight: 700 }}>Aproveite!</span>
+              Até 2020, <b style={{ color: configs?.textDescription }}>75%</b> do tráfego mobile de todo o mundo acontecerá por meio de
+              conteúdo em vídeo. Se prepare para essa tendência e junte-se ao grupo de empresas
+              que escolheram a <b style={{ color: configs?.textDescription }}>Eventials</b> como parceira nesta jornada.
             </p>
           </TextDescription>
         </Description>

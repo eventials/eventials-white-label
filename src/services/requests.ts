@@ -61,7 +61,6 @@ export const listAllWebinars = async (token: string) => {
     const response = await api.get(`${url}`, requestWithJwt(token));
     return response;
   } catch (error) {
-    console.error(error);
     return error.response;
   }
 };
