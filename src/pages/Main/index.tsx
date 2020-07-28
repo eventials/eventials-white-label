@@ -16,37 +16,31 @@ import {
 import { getToken, getRefreshToken } from 'services/organization';
 
 function Main() {
+  const [render, setRender] = React.useState(false)
   const [webinars, setWebinars] = React.useState([]);
   const [liveWebinars, setLiveWebinars] = React.useState([]);
 
   React.useEffect(() => {
     async function fetchData() {
 
-      let token: any = '';
+      let token: any = getToken();
 
-      if (getToken()) {
-        token = getToken()
-      } else {
-        const { access_token } = await generateToken()
+      if (!token) {
+        const { access_token }: any = await generateToken()
         token = access_token;
       }
 
       let response = await listAllWebinars(token);
 
-      if (response) {
-        if (response?.status === 401) {
-          if (getRefreshToken()) {
-            token = await refreshToken(getRefreshToken())
-            response = await listAllWebinars(token)
-          } else {
-            token = await generateToken();
-          }
+      if (response?.status === 401) {
+        if (getRefreshToken()) {
+          token = await refreshToken(getRefreshToken())
+          response = await listAllWebinars(token)
+          setRender(!render)
+        } else {
+          token = await generateToken();
         }
-        if (response?.status > 200 && response?.status !== 401) {
-          console.log(`Falha na api, erro  ${response.status}`);
-          return;
-        }
-
+      } else {
         const { data } = response;
         const live = await data.filter(web => web?.state === 'live');
 
@@ -54,10 +48,17 @@ function Main() {
         setWebinars(data);
       }
 
+      if (response?.status > 200 && response?.status !== 401) {
+        console.log(`Falha na api, erro  ${response.status}`);
+        return;
+      }
+
+
+
     }
 
     fetchData();
-  }, []);
+  }, [render]);
 
   const handleLayoutChange = () => {
     const currentWidth = window.innerWidth;

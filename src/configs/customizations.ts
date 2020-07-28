@@ -1,9 +1,9 @@
 export const configs = {
   // organization data
-  name: 'SND DISTRIBUIÇÃO DE PRODUTOS DE INFORMÁTICA SA',
-  adress: 'AV. COPACABANA, 238 – BARUERI – SP - 06472-001',
-  phone: 'Tel.: (11) 2187-8400',
-  site: 'https://www.snd.com.br/',
+  name: 'Eventials',
+  adress: ' Av. Brigadeiro Faria Lima, 1993, 7º andar - CEP 01452-001 - Jardim Paulistano - São Paulo - SP',
+  phone: 'Tel.:  +55 (11) 3544-0655 ',
+  site: 'https://www.eventials.com/',
 
   // images
   logo: 'https://s3.amazonaws.com/static.eventials.com/whitelabel-opensource/eventials-white.png',
@@ -23,11 +23,11 @@ export const configs = {
     'https://static-stg.eventials.com/static/images/placeholder-talk.png',
 
   // social media
-  youtube: 'https://www.youtube.com/channel/UCWXVR2HZGRoyTCmXlh98VSQ',
-  linkedIn: 'https://www.linkedin.com/company/snd/',
-  facebook: 'https://www.facebook.com/SNDDistribuidora/',
-  instagram: 'https://www.instagram.com/sndmais/',
-  allWebinars: 'https://www.eventials.com/SND/talks/',
+  youtube: 'https://www.youtube.com/channel/UCkcbeC-Mrhc7mxSHOFlRoUw',
+  linkedIn: 'https://www.linkedin.com/company/eventials/',
+  facebook: 'https://www.facebook.com/eventials',
+  instagram: 'https://www.instagram.com/eventials.webinars/',
+  allWebinars: 'https://www.eventials.com/eventials/talks',
 
   // feature flags
   contact: false,
