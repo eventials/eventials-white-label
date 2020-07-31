@@ -1,8 +1,8 @@
 export const configs = {
   // organization data
   name: 'Eventials',
-  adress: ' Av. Brigadeiro Faria Lima, 1993, 7º andar - CEP 01452-001 - Jardim Paulistano - São Paulo - SP',
-  phone: 'Tel.:  +55 (11) 3544-0655 ',
+  adress: ' Av. Brigadeiro Faria Lima, 1993, 7º andar',
+  phone: 'CEP 01452-001 - Jardim Paulistano - São Paulo - Tel.:  +55 (11) 3544-0655 ',
   site: 'https://www.eventials.com/',
 
   // images
