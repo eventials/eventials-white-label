@@ -110,23 +110,6 @@ export const configs = {
 };
 
 ```
-##  :beach_umbrella: Playground
-
-We have a playground (with a data mock), to you use, make this:
-
-1. Execute a json-server (dependencie) to use a mock data 
-	```shell
-		yarn json-server --watch db.json --port 3004
-	```
-2. Change of file **.env**
-	```shell
-		REACT_APP_API_URL=http://localhost:3004
-	```
-3. Now you can execute the react project in another terminal (don't execute this step before of step 2)
-	```shell
-		yarn dev
-	```
-4. Done, your project is running of a mock data.
 	
 ## 🤝 How to Contribute
 
