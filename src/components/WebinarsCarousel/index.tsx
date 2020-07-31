@@ -3,6 +3,7 @@ import ItemsCarousel from 'react-items-carousel';
 import moment from 'moment';
 import LiveIcon from 'assets/live.svg';
 import { configs } from 'configs/customizations';
+import { loadAllGroups } from './webinarsCarousel'
 import {
   CardDate,
   CardTitle,
@@ -13,14 +14,17 @@ import {
 } from './styles';
 
 interface WebinarsCarouselProps {
-  webinars: any;
+  groupId?: number;
+  webinars?: any;
   live?: boolean;
   title: string;
 }
 
-function WebinarsCarousel({ title, webinars, live }: WebinarsCarouselProps) {
+function WebinarsCarousel({ title, webinars, live, groupId }: WebinarsCarouselProps) {
   const [activeItemIndex, setActiveItemIndex] = React.useState(0);
   const [numberCards, setNumberCards] = React.useState(0);
+  const [stateWebinars, setStateWebinars] = React.useState(webinars || []);
+  const [render, setRender] = React.useState(true)
 
   const chevronWidth = 20;
 
@@ -41,6 +45,25 @@ function WebinarsCarousel({ title, webinars, live }: WebinarsCarouselProps) {
       setNumberCards(5);
     }
   };
+
+  React.useEffect(() => {
+
+    async function loadWebinars() {
+
+      if (groupId && render) {
+        const { talks } = await loadAllGroups(groupId)
+        setStateWebinars(talks)
+        setRender(false)
+      }
+
+    }
+    loadWebinars();
+
+    return () => {
+      setStateWebinars([])
+    };
+  }, [])
+
 
   React.useEffect(() => {
     window.addEventListener('resize', () => {
@@ -73,6 +96,7 @@ function WebinarsCarousel({ title, webinars, live }: WebinarsCarouselProps) {
           activeItemIndex={activeItemIndex}
           numberOfCards={numberCards === 0 ? handleLayoutChange() : numberCards}
           gutter={2}
+          key={Math.random()}
           slidesToScroll={1}
           outsideChevron
           chevronWidth={chevronWidth}
@@ -117,30 +141,32 @@ function WebinarsCarousel({ title, webinars, live }: WebinarsCarouselProps) {
             </svg>
           }
         >
-          {webinars
+          {stateWebinars.length > 0 && stateWebinars
             .reverse((a: any, b: any) => a.start_time + b.start_time)
             .map(webinar => (
-              <a
-                href={webinar?.url}
-                key={webinar?.id}
-                rel="noreferrer"
-                style={{ textDecoration: 'none', cursor: 'pointer' }}
-              >
-                <Item>
-                  <img
-                    className="d-block w-100"
-                    src={webinar.cover || configs?.defaultImage}
-                    alt={webinar?.title}
-                  />
+              <>
+                <a
+                  href={webinar?.url}
+                  key={webinar?.id}
+                  rel="noreferrer"
+                  style={{ textDecoration: 'none', cursor: 'pointer' }}
+                >
+                  <Item>
+                    <img
+                      className="d-block w-100"
+                      src={webinar.cover || configs?.defaultImage}
+                      alt={webinar?.title}
+                    />
 
-                  <CardTitle>{webinar?.title}</CardTitle>
-                  <CardDate>
-                    {moment(webinar?.start_time)
-                      .locale('pt-br')
-                      .format('DD/MM/YYYY - hh:mm')}
-                  </CardDate>
-                </Item>
-              </a>
+                    <CardTitle>{webinar?.title}</CardTitle>
+                    <CardDate>
+                      {moment(webinar?.start_time)
+                        .locale('pt-br')
+                        .format('DD/MM/YYYY - hh:mm')}
+                    </CardDate>
+                  </Item>
+                </a>
+              </>
             ))}
         </ItemsCarousel>
       </ContainerCarousel>

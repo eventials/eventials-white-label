@@ -4,61 +4,30 @@ import Footer from 'components/Footer';
 import WebinarCarousel from 'components/WebinarsCarousel';
 import { configs } from 'configs/customizations';
 import * as React from 'react';
-import { listAllWebinars, generateToken, refreshToken } from 'services/requests';
+import { loadAllGroups, loadLiveWebinars } from './main'
 import {
   ButtonSeeAll,
   Description,
   SeeAll,
   StyledContainer,
   TextDescription,
-  Toolbar,
+  Toolbar
 } from './styles';
-import { getToken, getRefreshToken } from 'services/organization';
 
 function Main() {
-  const [render, setRender] = React.useState(false)
-  const [webinars, setWebinars] = React.useState([]);
+  const [groups, setGroups]: any = React.useState([]);
   const [liveWebinars, setLiveWebinars] = React.useState([]);
 
   React.useEffect(() => {
-    async function fetchData() {
+    async function loadGroups() {
 
-      let token: any = getToken();
-
-      if (!token) {
-        const { access_token }: any = await generateToken()
-        token = access_token;
-      }
-
-      let response = await listAllWebinars(token);
-
-      if (response?.status === 401) {
-        if (getRefreshToken()) {
-          token = await refreshToken(getRefreshToken())
-          response = await listAllWebinars(token)
-          setRender(!render)
-        } else {
-          token = await generateToken();
-        }
-      } else {
-        const { data } = response;
-        const live = await data.filter(web => web?.state === 'live');
-
-        setLiveWebinars(live);
-        setWebinars(data);
-      }
-
-      if (response?.status > 200 && response?.status !== 401) {
-        console.log(`Falha na api, erro  ${response.status}`);
-        return;
-      }
-
-
+      setLiveWebinars(await loadLiveWebinars())
+      setGroups(await loadAllGroups())
 
     }
 
-    fetchData();
-  }, [render]);
+    loadGroups();
+  }, []);
 
   const handleLayoutChange = () => {
     const currentWidth = window.innerWidth;
@@ -79,9 +48,6 @@ function Main() {
 
   return (
     <>
-      {/* <div className="loading">
-        <span />
-      </div> */}
       <StyledContainer>
         <Toolbar>
           <a href={configs?.site}>
@@ -105,14 +71,15 @@ function Main() {
           </TextDescription>
         </Description>
 
-        {webinars.length > 0 && (
+        {liveWebinars.length > 0 && (
+          <WebinarCarousel title="Ao Vivo" webinars={liveWebinars} live={true} />
+        )}
+
+        {groups.length > 0 && (
           <>
-            {liveWebinars.length > 0 && (
-              <WebinarCarousel title="Ao Vivo" webinars={liveWebinars} live />
+            {groups.map(gr =>
+              <WebinarCarousel title={gr.description} groupId={gr.id} key={gr.id} />
             )}
-            <WebinarCarousel title="Cloud" webinars={webinars} />
-            <WebinarCarousel title="Cibersegurança" webinars={webinars} />
-            <WebinarCarousel title="Networking" webinars={webinars} />
           </>
         )}
 
