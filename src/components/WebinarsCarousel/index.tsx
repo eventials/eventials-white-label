@@ -61,6 +61,7 @@ function WebinarsCarousel({ title, webinars, live, groupId }: WebinarsCarouselPr
 
     return () => {
       setStateWebinars([])
+      setRender(false)
     };
   }, [])
 
@@ -96,8 +97,8 @@ function WebinarsCarousel({ title, webinars, live, groupId }: WebinarsCarouselPr
           activeItemIndex={activeItemIndex}
           numberOfCards={numberCards === 0 ? handleLayoutChange() : numberCards}
           gutter={2}
-          key={Math.random()}
           slidesToScroll={1}
+          infiniteLoop={true}
           outsideChevron
           chevronWidth={chevronWidth}
           leftChevron={

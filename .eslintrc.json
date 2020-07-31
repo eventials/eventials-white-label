@@ -22,7 +22,12 @@
     "ecmaVersion": 11,
     "sourceType": "module"
   },
-  "plugins": ["react", "react-hooks", "@typescript-eslint", "prettier"],
+  "plugins": [
+    "react",
+    "react-hooks",
+    "@typescript-eslint",
+    "prettier"
+  ],
   "rules": {
     "@typescript-eslint/explicit-function-return-type": "off",
     "@typescript-eslint/explicit-module-boundary-types": "off",
@@ -35,7 +40,9 @@
     "react/jsx-filename-extension": [
       1,
       {
-        "extensions": [".tsx"]
+        "extensions": [
+          ".tsx"
+        ]
       }
     ],
     "import/prefer-default-export": "off",
@@ -51,7 +58,9 @@
   "settings": {
     "import/resolver": {
       "typescript": {
-        "paths": ["src"]
+        "paths": [
+          "src"
+        ]
       }
     }
   }

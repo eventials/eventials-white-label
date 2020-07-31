@@ -8,7 +8,7 @@ export const StyledContainer = styled.div`
 export const Description = styled.div`
   display: flex;
   flex-direction: row;
-  padding: 0px 60px;
+  padding: 10px 60px 0px 60px;
   margin: auto;
   width: 100%;
   background-color: ${configs?.backgroundColorWhite};
