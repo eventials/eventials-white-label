@@ -64,6 +64,28 @@ export const listAllWebinars = async (token: string) => {
     return error.response;
   }
 };
+
+export const listAllGroups = async (token: string) => {
+  const url = `/groups`;
+
+  try {
+    const response = await api.get(`${url}`, requestWithJwt(token));
+    return response;
+  } catch (error) {
+    return error.response;
+  }
+};
+
+export const listWebinarsGroup = async (token: string, id: number) => {
+  const url = `/groups/${id}`;
+
+  try {
+    const response = await api.get(`${url}`, requestWithJwt(token));
+    return response;
+  } catch (error) {
+    return error.response;
+  }
+};
 export const getCurrentUser = async (token: string) => {
   const url = `/me`;
 
