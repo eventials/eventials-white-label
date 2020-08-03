@@ -71,11 +71,11 @@ function Main() {
           </TextDescription>
         </Description>
 
-        {liveWebinars.length > 0 && (
+        {liveWebinars?.length > 0 && (
           <WebinarCarousel title="Ao Vivo" webinars={liveWebinars} live={true} />
         )}
 
-        {groups.length > 0 && (
+        {groups?.length > 0 && (
           <>
             {groups.map(gr =>
               <WebinarCarousel title={gr.description} groupId={gr.id} key={gr.id} />

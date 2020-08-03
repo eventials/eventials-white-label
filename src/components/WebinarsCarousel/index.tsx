@@ -142,7 +142,7 @@ function WebinarsCarousel({ title, webinars, live, groupId }: WebinarsCarouselPr
             </svg>
           }
         >
-          {stateWebinars.length > 0 && stateWebinars
+          {stateWebinars?.length > 0 && stateWebinars
             .reverse((a: any, b: any) => a.start_time + b.start_time)
             .map(webinar => (
               <>
