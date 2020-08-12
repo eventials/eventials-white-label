@@ -16,48 +16,72 @@
   Eventials Whiteabel is a open souce project, so you can edit with yours customizations (Users Eventials).
 </p>
 
-
 ## 🚀 Get Up and Running in 10 Minutes
-
 
 You can running a new Eventials Whitelabel in your local dev environment in 5 minutes with these four steps:
 
-
 1. Make a clone of project
-   
+
 2. Install dependencies
- ```shell
-   yarn
-   ```
 
-3. Get your credentials in [https://www.eventials.com/oauth-clients/](https://www.eventials.com/oauth-clients/ "https://www.eventials.com/oauth-clients/")
+```shell
+  yarn
+```
 
- a) Create a credentials
-[![step1](https://s3.amazonaws.com/dev-assets.eventials.com/whitelabel-dev/1+-+create-credentials.jpg "step1")](https://s3.amazonaws.com/dev-assets.eventials.com/whitelabel-dev/1+-+create-credentials.jpg "step1")
+3. Get your credentials in [https://www.eventials.com/oauth-clients/](https://www.eventials.com/oauth-clients/ 'https://www.eventials.com/oauth-clients/')
 
- b) Add a project name
-[![Add a project name](https://s3.amazonaws.com/dev-assets.eventials.com/whitelabel-dev/2+-+added-project-name.jpg "Add a project name")](http://https://s3.amazonaws.com/dev-assets.eventials.com/whitelabel-dev/2+-+added-project-name.jpg "Add a project name")
+a) Create a credentials
+[![step1](https://s3.amazonaws.com/dev-assets.eventials.com/whitelabel-dev/1+-+create-credentials.jpg 'step1')](https://s3.amazonaws.com/dev-assets.eventials.com/whitelabel-dev/1+-+create-credentials.jpg 'step1')
 
- c) Copy your credentials
- [![Copy your credentials](https://s3.amazonaws.com/dev-assets.eventials.com/whitelabel-dev/3+-+copy-credentials.jpg "Copy your credentials")](https://s3.amazonaws.com/dev-assets.eventials.com/whitelabel-dev/3+-+copy-credentials.jpg "Copy your credentials")
+b) Add a project name
+[![Add a project name](https://s3.amazonaws.com/dev-assets.eventials.com/whitelabel-dev/2+-+added-project-name.jpg 'Add a project name')](http://https://s3.amazonaws.com/dev-assets.eventials.com/whitelabel-dev/2+-+added-project-name.jpg 'Add a project name')
 
-4. We recommend that you read a documentation of our API, you can see in this link ==> [https://eventialsapi.docs.apiary.io/#](https://eventialsapi.docs.apiary.io/# "https://eventialsapi.docs.apiary.io/#")
+c) Copy your credentials
+[![Copy your credentials](https://s3.amazonaws.com/dev-assets.eventials.com/whitelabel-dev/3+-+copy-credentials.jpg 'Copy your credentials')](https://s3.amazonaws.com/dev-assets.eventials.com/whitelabel-dev/3+-+copy-credentials.jpg 'Copy your credentials')
 
-5. Now you can create a file .**env** in root project  and added this informations:
- ```shell
-   REACT_APP_API_URL=
-   REACT_APP_CLIENT_ID=
-   REACT_APP_CLIENT_SECRET=
-   ```
+4. We recommend that you read a documentation of our API, you can see in this link ==> [https://eventialsapi.docs.apiary.io/#](https://eventialsapi.docs.apiary.io/# 'https://eventialsapi.docs.apiary.io/#')
+
+5. Now you can create a file .**env** in root project and added this informations:
+
+```shell
+  REACT_APP_API_URL=
+  REACT_APP_CLIENT_ID=
+  REACT_APP_CLIENT_SECRET=
+```
+
 6. To running the project
 
- ```shell
-   yarn dev
+```shell
+  yarn dev
 
-   ```
-   Done, your project is running.
+```
 
+Done, your project is running.
 
+## :earth_americas: Translations
+
+    In project we have two files:
+    - **/src/i18n/messages.tsx**
+    - **/src/i18n/util.ts**
+
+In **messages.tsx** we have dictionary of all words to translations, to en, pt and es, so you can added your words in respectives languages to after you use in all project.
+
+In **util.ts** we get the current and default language of navigator and apply in translations lib.
+
+For you use a dictionary of word you need use bellow code:
+
+```javascript
+	import { FormattedMessage } from 'react-intl';
+
+...
+		//id => is a name of dictionary of words in messages.tsx
+           <p>
+                <FormattedMessage id="development" />
+          </p>
+
+```
+
+Ready now your word will be automatically translated ;).
 
 ## :art: Customizations
 
@@ -73,13 +97,8 @@ export const configs = {
 
   // images
   logo: 'URL_LOGO_ORGANIZATION',
-  descriptionImage:  'IMAGE_TO_DESCRIPTION',
-  banner: [
-    'URL_BANNER_1',
-    'URL_BANNER_2',
-	'URL_BANNER_3',
-	'...'
-  ],
+  descriptionImage: 'IMAGE_TO_DESCRIPTION',
+  banner: ['URL_BANNER_1', 'URL_BANNER_2', 'URL_BANNER_3', '...'],
   bannerContact: 'URL_BANNER_CONTACT',
 
   imageTitleContact: 'URL_IMAGE_TITLE_CONTACT',
@@ -108,9 +127,8 @@ export const configs = {
   titleCard: '#343434',
   dateCard: '#535252',
 };
-
 ```
-	
+
 ## 🤝 How to Contribute
 
 Anyone can contribuite in this project, you need:
@@ -118,7 +136,6 @@ Anyone can contribuite in this project, you need:
 1. Make a fork of project
 2. Do your changes
 3. Open a pull request and waiting
-
 
 ## :memo: License
 
